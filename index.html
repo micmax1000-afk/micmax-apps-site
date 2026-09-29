@@ -7,16 +7,18 @@
 <title>MicMax Apps</title>
 
 https://fonts.googleapis.com
-<link rel="preconnect" href="https://fonts.gstatic.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap
+<link relonts.gstatic.com
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap
 
 <style>
 
 :root{
     --primary:#1976d2;
     --primary-dark:#1565c0;
-    --bg:#f5f7fa;
+    --background:#f5f7fa;
     --card:#ffffff;
     --text:#1f2937;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 *{
@@ -31,33 +33,110 @@ html{
 
 body{
     font-family:'Inter',sans-serif;
-    background:var(--bg);
+    background:var(--background);
     color:var(--text);
+    line-height:1.6;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#1976d2;
+    border-radius:50px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(95%,1200px);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:14px 24px;
+
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(16px);
+
+    border-radius:20px;
+
+    z-index:1000;
+}
+
+.brand{
+    text-decoration:none;
+    color:white;
+    font-size:1.1rem;
+    font-weight:700;
+}
+
+.navbar nav{
+    display:flex;
+    gap:24px;
+}
+
+.navbar nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.navbar nav a:hover{
+    opacity:.9;
+}
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:1.8rem;
+    cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
     min-height:60vh;
-    background:linear-gradient(135deg,#1976d2,#1565c0,#0d47a1);
+    background:linear-gradient(
+        135deg,
+        #1976d2,
+        #1565c0,
+        #0d47a1
+    );
+
+    color:white;
+
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    color:white;
-    padding:40px 20px;
+
+    padding:130px 20px 80px;
 }
 
-.hero-content h1{
-    font-size:4rem;
+.hero-content{
+    animation:fadeUp .8s ease;
+}
+
+.hero h1{
+    font-size:clamp(2.8rem,8vw,4.5rem);
     font-weight:800;
-    margin-bottom:15px;
 }
 
 .subtitle{
-    font-size:1.1rem;
-    opacity:.9;
+    margin-top:15px;
     margin-bottom:35px;
+    opacity:.95;
 }
 
 .hero-buttons{
@@ -68,11 +147,15 @@ body{
 }
 
 .btn{
-    padding:14px 28px;
-    border-radius:12px;
     text-decoration:none;
+    padding:14px 26px;
+    border-radius:12px;
     font-weight:600;
-    transition:0.3s;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
 }
 
 .btn-primary{
@@ -85,10 +168,6 @@ body{
     color:white;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-}
-
 /* APPS */
 
 .apps-section{
@@ -99,13 +178,13 @@ body{
 
 .apps-section h2{
     text-align:center;
-    font-size:2rem;
     margin-bottom:40px;
+    font-size:2rem;
 }
 
 .apps-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
 }
 
@@ -113,12 +192,18 @@ body{
     background:var(--card);
     border-radius:24px;
     overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:0.3s;
+    box-shadow:var(--shadow);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    animation:cardAppear .7s ease both;
 }
 
 .app-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
 }
 
 .app-screenshot{
@@ -126,6 +211,11 @@ body{
     height:250px;
     object-fit:cover;
     display:block;
+    transition:transform .4s ease;
+}
+
+.app-card:hover .app-screenshot{
+    transform:scale(1.04);
 }
 
 .app-content{
@@ -133,26 +223,31 @@ body{
 }
 
 .app-content h3{
-    margin-bottom:12px;
-}
-
-.app-content p{
-    line-height:1.6;
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
 .card-buttons{
     display:flex;
     gap:10px;
     flex-wrap:wrap;
+    margin-top:20px;
 }
 
 .btn-card{
-    padding:10px 18px;
-    border-radius:10px;
+    flex:1;
+    text-align:center;
     text-decoration:none;
     color:white;
     font-weight:600;
+    padding:12px;
+
+    border-radius:10px;
+
+    transition:.25s;
+}
+
+.btn-card:hover{
+    transform:translateY(-2px);
 }
 
 .github{
@@ -163,15 +258,15 @@ body{
     background:#34A853;
 }
 
-/* INFO */
+/* INFO BOX */
 
 .info-box{
     max-width:1200px;
-    margin:40px auto;
-    background:white;
+    margin:30px auto;
     padding:30px;
+    background:white;
     border-radius:24px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    box-shadow:var(--shadow);
 }
 
 .info-box h2{
@@ -181,34 +276,129 @@ body{
 /* FOOTER */
 
 footer{
-    margin-top:60px;
     background:#111827;
     color:white;
     text-align:center;
-    padding:40px 20px;
+    padding:50px 20px;
+    margin-top:50px;
 }
 
 footer a{
     color:#64b5f6;
-    text-decoration:none;
 }
+
+/* ACCESSIBILITÀ */
+
+a:focus-visible,
+button:focus-visible{
+    outline:3px solid #64b5f6;
+    outline-offset:3px;
+    border-radius:10px;
+}
+
+/* ANIMAZIONI */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes cardAppear{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-    .hero-content h1{
-        font-size:2.8rem;
+    .menu-toggle{
+        display:block;
     }
 
-    .subtitle{
-        font-size:1rem;
+    .navbar{
+        width:92%;
     }
 
+    .navbar nav{
+        display:none;
+        position:absolute;
+
+        top:72px;
+        left:0;
+        right:0;
+
+        flex-direction:column;
+
+        background:#0d47a1;
+        border-radius:20px;
+        padding:10px;
+
+        text-align:center;
+    }
+
+    .navbar nav.active{
+        display:flex;
+    }
+
+    .navbar nav a{
+        padding:12px;
+    }
+
+    .hero{
+        min-height:50vh;
+        padding-top:120px;
+    }
+
+    .card-buttons{
+        flex-direction:column;
+    }
+
+    .btn-card{
+        width:100%;
+    }
 }
 
 </style>
 </head>
 
 <body>
+
+<header class="navbar">
+
+    #
+        MicMax Apps
+    </a>
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Apri menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        ☰
+    </button>
+
+    <nav id="mobileMenu">
+        #appsApp</a>
+        #privacyPrivacy</a>
+        #supportoSupporto</a>
+        <a href="mailto:mic.max.1000@gmail.com">Contatti</a>
+    </nav>
+
+</header>
 
 <section class="hero">
 
@@ -244,10 +434,11 @@ footer a{
 
         <!-- TURNI -->
 
-        <div class="app-card">
+        <article class="app-card">
 
-            <img
-                src="images/turni-home.webp"pp-content">
+            images/turni-home.webp
+
+            <div class="app-content">
 
                 <h3>📅 Turni 2.0</h3>
 
@@ -261,11 +452,12 @@ footer a{
                     <a
                         href="https://github.com/micmax1000-afk/turni-2.0"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="btn-card github">
                         GitHub
                     </a>
 
-                    PLAYSTORE_TURNI
+                    #
                         Google Play
                     </a>
 
@@ -273,11 +465,11 @@ footer a{
 
             </div>
 
-        </div>
+        </article>
 
         <!-- SCHENGEN -->
 
-        <div class="app-card">
+        <article class="app-card">
 
             images/schengen-home.webp
 
@@ -286,7 +478,8 @@ footer a{
                 <h3>🇪🇺 Schengen Days</h3>
 
                 <p>
-                    Calcolo automatico dei giorni Schengen e verifica della regola 90/180.
+                    Calcolo automatico dei giorni Schengen
+                    e verifica della regola 90/180.
                 </p>
 
                 <div class="card-buttons">
@@ -294,11 +487,12 @@ footer a{
                     <a
                         href="https://github.com/micmax1000-afk/schengen-days"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="btn-card github">
                         GitHub
                     </a>
 
-                    PLAYSTORE_SCHENGEN
+                    #
                         Google Play
                     </a>
 
@@ -306,13 +500,13 @@ footer a{
 
             </div>
 
-        </div>
+        </article>
 
     </div>
 
 </section>
 
-<div class="info-box">
+<section id="privacy" class="info-box">
 
     <h2>🔒 Privacy Policy</h2>
 
@@ -321,26 +515,25 @@ footer a{
         I dati vengono salvati localmente sul dispositivo salvo diversa indicazione.
     </p>
 
-</div>
+</section>
 
-<div class="info-box">
+<section id="supporto" class="info-box">
 
     <h2>🛠 Supporto</h2>
 
     <p>
-        Per segnalazioni, bug report o suggerimenti:
+        Per assistenza, segnalazioni o suggerimenti:
     </p>
 
     <br>
 
     <p>
-        📧
         <a href="mailto:mic.max.1000@gmail.com">
             mic.max.1000@gmail.com
         </a>
     </p>
 
-</div>
+</section>
 
 <footer>
 
@@ -354,7 +547,7 @@ footer a{
 
     <br>
 
-    <a href="https://micmax-apps.netlify.app">
+    <a href="https://micmax-apps.netlify.app/">
         micmax-apps.netlify.app
     </a>
 
@@ -363,6 +556,27 @@ footer a{
     <p>© 2026 MicMax Apps</p>
 
 </footer>
+
+<script>
+
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("active");
+
+    const expanded =
+        menuToggle.getAttribute("aria-expanded") === "true";
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        !expanded
+    );
+
+});
+
+</script>
 
 </body>
 </html>
