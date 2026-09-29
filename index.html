@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Progetti Android | MicMax</title>
+  <title>MicMax Apps | Progetti Android</title>
+
   <meta
     name="description"
     content="Portfolio dei progetti Android sviluppati da MicMax: Schengen Days e Turni 2.0."
@@ -38,11 +39,25 @@
       min-height: 100vh;
       color: var(--text);
       background:
-        radial-gradient(circle at 10% 0%, rgba(98, 168, 255, 0.2), transparent 30rem),
-        radial-gradient(circle at 90% 15%, rgba(139, 124, 255, 0.17), transparent 28rem),
+        radial-gradient(
+          circle at 10% 0%,
+          rgba(98, 168, 255, 0.2),
+          transparent 30rem
+        ),
+        radial-gradient(
+          circle at 90% 15%,
+          rgba(139, 124, 255, 0.17),
+          transparent 28rem
+        ),
         var(--background);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
       line-height: 1.6;
     }
 
@@ -61,7 +76,7 @@
       top: 0;
       z-index: 10;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(8, 17, 31, 0.72);
+      background: rgba(8, 17, 31, 0.75);
       backdrop-filter: blur(18px);
     }
 
@@ -145,7 +160,12 @@
     }
 
     .gradient-text {
-      background: linear-gradient(110deg, #fff 10%, var(--primary), var(--secondary));
+      background: linear-gradient(
+        110deg,
+        #ffffff 10%,
+        var(--primary),
+        var(--secondary)
+      );
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -175,7 +195,10 @@
       border: 1px solid transparent;
       border-radius: 12px;
       font-weight: 700;
-      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
     }
 
     .button:hover {
@@ -317,9 +340,16 @@
       padding: 28px;
       border: 1px solid var(--card-border);
       border-radius: 24px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.035));
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.035)
+        );
       box-shadow: var(--shadow);
-      transition: transform 0.25s ease, border-color 0.25s ease;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
     }
 
     .project-card:hover {
@@ -334,7 +364,12 @@
       place-items: center;
       margin-bottom: 26px;
       border-radius: 18px;
-      background: linear-gradient(135deg, rgba(98,168,255,0.28), rgba(139,124,255,0.3));
+      background:
+        linear-gradient(
+          135deg,
+          rgba(98, 168, 255, 0.28),
+          rgba(139, 124, 255, 0.3)
+        );
       font-size: 30px;
     }
 
@@ -388,14 +423,17 @@
       align-items: center;
     }
 
-    .about-box {
+    .about-box,
+    .privacy-box {
       padding: 32px;
       border: 1px solid var(--card-border);
       border-radius: 24px;
       background: var(--card);
+      box-shadow: var(--shadow);
     }
 
-    .about-box p {
+    .about-box p,
+    .privacy-box p {
       color: var(--muted);
     }
 
@@ -427,7 +465,11 @@
       border: 1px solid rgba(98, 168, 255, 0.28);
       border-radius: 28px;
       background:
-        linear-gradient(120deg, rgba(98, 168, 255, 0.14), rgba(139, 124, 255, 0.12)),
+        linear-gradient(
+          120deg,
+          rgba(98, 168, 255, 0.14),
+          rgba(139, 124, 255, 0.12)
+        ),
         var(--card);
       text-align: center;
     }
@@ -443,6 +485,41 @@
       color: var(--muted);
     }
 
+    .email-address {
+      margin-top: 18px !important;
+      font-size: 0.95rem;
+    }
+
+    .email-address a,
+    .privacy-box a {
+      color: var(--primary);
+    }
+
+    .privacy-box h3 {
+      margin-top: 28px;
+      margin-bottom: 8px;
+      font-size: 1.15rem;
+    }
+
+    .privacy-box h3:first-child {
+      margin-top: 0;
+    }
+
+    .privacy-box p {
+      margin-bottom: 14px;
+    }
+
+    .privacy-box strong {
+      color: var(--text);
+    }
+
+    .privacy-date {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--card-border);
+      font-size: 0.9rem;
+    }
+
     footer {
       padding: 28px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -454,6 +531,10 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
+    }
+
+    .footer-content a:hover {
+      color: white;
     }
 
     @media (max-width: 800px) {
@@ -501,6 +582,11 @@
       .footer-content {
         flex-direction: column;
       }
+
+      .privacy-box,
+      .about-box {
+        padding: 24px;
+      }
     }
   </style>
 </head>
@@ -517,6 +603,7 @@
         <a href="#progetti">Progetti</a>
         <a href="#chi-sono">Chi sono</a>
         <a href="#contatti">Contatti</a>
+        <a href="#privacy">Privacy</a>
       </nav>
     </div>
   </header>
@@ -541,6 +628,7 @@
           <a class="button button-primary" href="#progetti">
             Scopri i progetti →
           </a>
+
           <a
             class="button button-secondary"
             href="https://github.com/micmax1000-afk"
@@ -567,6 +655,7 @@
             <div class="screen-card">
               <div class="screen-label">PROGETTI OPEN SOURCE</div>
               <div class="screen-number">02</div>
+
               <div class="screen-bar">
                 <span></span>
               </div>
@@ -580,7 +669,9 @@
       <div class="container">
         <div class="section-heading">
           <div class="eyebrow">Portfolio</div>
+
           <h2>Progetti in evidenza</h2>
+
           <p>
             Esplora il codice sorgente e scopri come sono state realizzate
             queste applicazioni.
@@ -655,14 +746,15 @@
       <div class="container about">
         <div class="section-heading">
           <div class="eyebrow">Il mio approccio</div>
+
           <h2>Codice utile, interfacce chiare.</h2>
         </div>
 
         <div class="about-box">
           <p>
             Sviluppo applicazioni Android concentrandomi su funzionalità
-            concrete, semplicità d'uso e strumenti che possano essere
-            realmente utili nella vita quotidiana.
+            concrete, semplicità d'uso e strumenti utili nella vita
+            quotidiana.
           </p>
 
           <div class="stats">
@@ -683,21 +775,137 @@
     <section id="contatti">
       <div class="container">
         <div class="contact">
-          <h2>Vuoi vedere il codice?</h2>
+          <h2>Hai una domanda?</h2>
 
           <p>
-            Tutti i progetti sono disponibili su GitHub. Puoi consultarli,
-            scaricarli o seguire gli aggiornamenti.
+            Per informazioni, suggerimenti o segnalazioni riguardanti le app,
+            puoi contattarmi direttamente via email.
           </p>
 
           <a
             class="button button-primary"
-            href="https://github.com/micmax1000-afk"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:mic.max.1000@gmail.com"
           >
-            Visita il mio GitHub ↗
+            Scrivimi una email →
           </a>
+
+          <p class="email-address">
+            <a href="mailto:mic.max.1000@gmail.com">
+              mic.max.1000@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Informazioni legali</div>
+
+          <h2>Privacy delle app</h2>
+
+          <p>
+            Informazioni sul trattamento dei dati personali nelle applicazioni
+            Schengen Days e Turni 2.0.
+          </p>
+        </div>
+
+        <div class="privacy-box">
+          <h3>1. Titolare del trattamento</h3>
+
+          <p>
+            Il titolare del trattamento dei dati è il proprietario e
+            sviluppatore delle applicazioni.
+          </p>
+
+          <p>
+            Per qualsiasi domanda relativa alla privacy è possibile contattare:
+          </p>
+
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:mic.max.1000@gmail.com">
+              mic.max.1000@gmail.com
+            </a>
+          </p>
+
+          <h3>2. Dati trattati</h3>
+
+          <p>
+            Le applicazioni sono progettate per funzionare senza richiedere
+            necessariamente la registrazione di un account o l'inserimento di
+            dati identificativi personali.
+          </p>
+
+          <p>
+            I dati inseriti dall'utente, come date, turni o altre informazioni
+            utilizzate dalle app, possono essere conservati localmente sul
+            dispositivo dell'utente, esclusivamente per permettere il
+            funzionamento delle applicazioni.
+          </p>
+
+          <h3>3. Comunicazione dei dati</h3>
+
+          <p>
+            I dati inseriti nelle app non vengono venduti, ceduti o comunicati
+            a terzi, salvo quando ciò sia necessario per il funzionamento di
+            eventuali servizi esterni utilizzati dall'applicazione o quando
+            previsto dalla legge.
+          </p>
+
+          <h3>4. Dati tecnici</h3>
+
+          <p>
+            Il dispositivo potrebbe generare informazioni tecniche necessarie
+            al funzionamento del sistema operativo o dei servizi Google Play.
+            Tali informazioni sono gestite secondo le politiche dei rispettivi
+            fornitori.
+          </p>
+
+          <h3>5. Permessi dell'applicazione</h3>
+
+          <p>
+            Le app possono richiedere esclusivamente i permessi necessari alle
+            funzionalità disponibili. L'utente può gestire o revocare i
+            permessi dalle impostazioni del proprio dispositivo Android.
+          </p>
+
+          <h3>6. Conservazione dei dati</h3>
+
+          <p>
+            I dati salvati localmente rimangono sul dispositivo fino alla loro
+            eliminazione da parte dell'utente, alla disinstallazione
+            dell'applicazione o alla cancellazione dei dati dell'app dalle
+            impostazioni Android.
+          </p>
+
+          <h3>7. Sicurezza</h3>
+
+          <p>
+            Vengono adottate misure ragionevoli per proteggere le informazioni
+            gestite dalle applicazioni. Nessun sistema informatico può tuttavia
+            garantire una sicurezza assoluta.
+          </p>
+
+          <h3>8. Minori</h3>
+
+          <p>
+            Le applicazioni non sono rivolte consapevolmente alla raccolta di
+            dati personali di minori.
+          </p>
+
+          <h3>9. Modifiche alla privacy policy</h3>
+
+          <p>
+            Questa informativa può essere aggiornata in caso di modifiche alle
+            applicazioni o alle modalità di trattamento dei dati. La versione
+            aggiornata sarà pubblicata su questa pagina.
+          </p>
+
+          <p class="privacy-date">
+            Ultimo aggiornamento: 29 settembre 2026
+          </p>
         </div>
       </div>
     </section>
@@ -706,7 +914,12 @@
   <footer>
     <div class="container footer-content">
       <span>© 2026 MicMax Apps</span>
-      <span>Progetti Android e open source</span>
+
+      <span>
+        <a href="#privacy">Privacy Policy</a>
+        ·
+        <a href="mailto:mic.max.1000@gmail.com">Contatti</a>
+      </span>
     </div>
   </footer>
 </body>
