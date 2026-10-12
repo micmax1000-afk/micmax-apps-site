@@ -1,0 +1,6 @@
+# Il file delle tabelle lo legge l'app Turni & Accessorio PS: va permesso da qualsiasi origine
+# e non va tenuto in cache a lungo, così un aggiornamento arriva subito.
+/turni/tabelle.json
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+  Content-Type: application/json; charset=utf-8
