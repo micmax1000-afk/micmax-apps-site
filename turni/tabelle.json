@@ -1,0 +1,665 @@
+{
+ "formato": 1,
+ "versione": "2026.10",
+ "aggiornato": "2026-10-12",
+ "nota": "",
+ "fonte": "https://micmax-apps.netlify.app/tabelle-turni.html",
+ "tabelle": {
+  "stipendiAnnuiAttuale": {
+   "Agente": 20576.38,
+   "Agente Scelto": 21211.75,
+   "Assistente": 21896,
+   "Assistente Capo": 22775.75,
+   "Assistente Capo Coordinatore": 23753.25,
+   "Vice Sovrintendente": 22824.63,
+   "Sovrintendente": 23753.25,
+   "Sovrintendente Capo": 24290.88,
+   "Sovrintendente Capo Coordinatore": 25610.5,
+   "Vice Ispettore": 24584.13,
+   "Ispettore": 25610.5,
+   "Ispettore Capo": 26099.25,
+   "Ispettore Superiore": 26881.25,
+   "Sostituto Commissario": 28054.25,
+   "Sostituto Commissario Coordinatore": 28934,
+   "Vice Commissario": 26734.63,
+   "Commissario": 28934,
+   "Commissario Capo": 29422.75
+  },
+  "stipendiAnnui2027": {
+   "Agente": 21840.43,
+   "Agente Scelto": 22514.84,
+   "Assistente": 23241.12,
+   "Assistente Capo": 24174.92,
+   "Assistente Capo Coordinatore": 25212.47,
+   "Vice Sovrintendente": 24226.79,
+   "Sovrintendente": 25212.47,
+   "Sovrintendente Capo": 25783.12,
+   "Sovrintendente Capo Coordinatore": 27183.81,
+   "Vice Ispettore": 25886.87,
+   "Ispettore": 27183.81,
+   "Ispettore Capo": 27702.59,
+   "Ispettore Superiore": 28532.63,
+   "Sostituto Commissario": 29777.69,
+   "Sostituto Commissario Coordinatore": 30711.48,
+   "Vice Commissario": 28376.99,
+   "Commissario": 30711.48,
+   "Commissario Capo": 31230.26
+  },
+  "indennitaPensionabileAnnuaAttuale": {
+   "Agente": 7300.68,
+   "Agente Scelto": 7736.52,
+   "Assistente": 8328.72,
+   "Assistente Capo": 9101.880000000001,
+   "Assistente Capo Coordinatore": 9101.880000000001,
+   "Vice Sovrintendente": 10000.68,
+   "Sovrintendente": 10047.72,
+   "Sovrintendente Capo": 10646.76,
+   "Sovrintendente Capo Coordinatore": 10646.76,
+   "Vice Ispettore": 10361.039999999999,
+   "Ispettore": 10696.56,
+   "Ispettore Capo": 11039.400000000001,
+   "Ispettore Superiore": 11533.92,
+   "Sostituto Commissario": 11669.76,
+   "Sostituto Commissario Coordinatore": 11669.76,
+   "Vice Commissario": 11333.16,
+   "Commissario": 11797.44,
+   "Commissario Capo": 11919.48
+  },
+  "indennitaPensionabileAnnua2027": {
+   "Agente": 7782.719999999999,
+   "Agente Scelto": 8247.36,
+   "Assistente": 8878.68,
+   "Assistente Capo": 9702.84,
+   "Assistente Capo Coordinatore": 9702.84,
+   "Vice Sovrintendente": 10661.039999999999,
+   "Sovrintendente": 10711.2,
+   "Sovrintendente Capo": 11349.72,
+   "Sovrintendente Capo Coordinatore": 11349.72,
+   "Vice Ispettore": 11045.16,
+   "Ispettore": 11402.880000000001,
+   "Ispettore Capo": 11768.28,
+   "Ispettore Superiore": 12295.560000000001,
+   "Sostituto Commissario": 12440.28,
+   "Sostituto Commissario Coordinatore": 12440.28,
+   "Vice Commissario": 12081.48,
+   "Commissario": 12576.48,
+   "Commissario Capo": 12706.560000000001
+  },
+  "iisMensile": 0,
+  "straordinarioOrarioAttuale": {
+   "Agente": {
+    "diurno": 12.03,
+    "notturnoOFestivo": 13.62,
+    "notturnoFestivo": 15.71
+   },
+   "Agente Scelto": {
+    "diurno": 12.41,
+    "notturnoOFestivo": 14.04,
+    "notturnoFestivo": 16.2
+   },
+   "Assistente": {
+    "diurno": 12.8,
+    "notturnoOFestivo": 14.49,
+    "notturnoFestivo": 16.71
+   },
+   "Assistente Capo": {
+    "diurno": 13.32,
+    "notturnoOFestivo": 15.07,
+    "notturnoFestivo": 17.39
+   },
+   "Assistente Capo Coordinatore": {
+    "diurno": 13.89,
+    "notturnoOFestivo": 15.71,
+    "notturnoFestivo": 18.12
+   },
+   "Vice Sovrintendente": {
+    "diurno": 13.35,
+    "notturnoOFestivo": 15.1,
+    "notturnoFestivo": 17.42
+   },
+   "Sovrintendente": {
+    "diurno": 13.89,
+    "notturnoOFestivo": 15.71,
+    "notturnoFestivo": 18.12
+   },
+   "Sovrintendente Capo": {
+    "diurno": 14.21,
+    "notturnoOFestivo": 16.07,
+    "notturnoFestivo": 18.54
+   },
+   "Sovrintendente Capo Coordinatore": {
+    "diurno": 14.97,
+    "notturnoOFestivo": 16.93,
+    "notturnoFestivo": 19.53
+   },
+   "Vice Ispettore": {
+    "diurno": 14.26,
+    "notturnoOFestivo": 16.12,
+    "notturnoFestivo": 18.6
+   },
+   "Ispettore": {
+    "diurno": 14.97,
+    "notturnoOFestivo": 16.93,
+    "notturnoFestivo": 19.53
+   },
+   "Ispettore Capo": {
+    "diurno": 15.26,
+    "notturnoOFestivo": 17.26,
+    "notturnoFestivo": 19.91
+   },
+   "Ispettore Superiore": {
+    "diurno": 15.72,
+    "notturnoOFestivo": 17.78,
+    "notturnoFestivo": 20.51
+   },
+   "Sostituto Commissario": {
+    "diurno": 16.41,
+    "notturnoOFestivo": 18.56,
+    "notturnoFestivo": 21.41
+   },
+   "Sostituto Commissario Coordinatore": {
+    "diurno": 16.91,
+    "notturnoOFestivo": 19.13,
+    "notturnoFestivo": 22.07
+   },
+   "Vice Commissario": {
+    "diurno": 15.63,
+    "notturnoOFestivo": 17.68,
+    "notturnoFestivo": 20.4
+   },
+   "Commissario": {
+    "diurno": 16.91,
+    "notturnoOFestivo": 19.13,
+    "notturnoFestivo": 22.07
+   },
+   "Commissario Capo": {
+    "diurno": 17.21,
+    "notturnoOFestivo": 19.47,
+    "notturnoFestivo": 22.46
+   }
+  },
+  "straordinarioOrario2027": {
+   "Agente": {
+    "diurno": 12.77,
+    "notturnoOFestivo": 14.45,
+    "notturnoFestivo": 16.67
+   },
+   "Agente Scelto": {
+    "diurno": 13.17,
+    "notturnoOFestivo": 14.9,
+    "notturnoFestivo": 17.19
+   },
+   "Assistente": {
+    "diurno": 13.59,
+    "notturnoOFestivo": 15.37,
+    "notturnoFestivo": 17.73
+   },
+   "Assistente Capo": {
+    "diurno": 14.13,
+    "notturnoOFestivo": 15.98,
+    "notturnoFestivo": 18.44
+   },
+   "Assistente Capo Coordinatore": {
+    "diurno": 14.74,
+    "notturnoOFestivo": 16.67,
+    "notturnoFestivo": 19.23
+   },
+   "Vice Sovrintendente": {
+    "diurno": 14.17,
+    "notturnoOFestivo": 16.03,
+    "notturnoFestivo": 18.5
+   },
+   "Sovrintendente": {
+    "diurno": 14.74,
+    "notturnoOFestivo": 16.67,
+    "notturnoFestivo": 19.23
+   },
+   "Sovrintendente Capo": {
+    "diurno": 15.07,
+    "notturnoOFestivo": 17.05,
+    "notturnoFestivo": 19.67
+   },
+   "Sovrintendente Capo Coordinatore": {
+    "diurno": 15.89,
+    "notturnoOFestivo": 17.97,
+    "notturnoFestivo": 20.73
+   },
+   "Vice Ispettore": {
+    "diurno": 15.13,
+    "notturnoOFestivo": 17.11,
+    "notturnoFestivo": 19.74
+   },
+   "Ispettore": {
+    "diurno": 15.89,
+    "notturnoOFestivo": 17.97,
+    "notturnoFestivo": 20.73
+   },
+   "Ispettore Capo": {
+    "diurno": 16.2,
+    "notturnoOFestivo": 18.32,
+    "notturnoFestivo": 21.14
+   },
+   "Ispettore Superiore": {
+    "diurno": 16.68,
+    "notturnoOFestivo": 18.87,
+    "notturnoFestivo": 21.77
+   },
+   "Sostituto Commissario": {
+    "diurno": 17.41,
+    "notturnoOFestivo": 19.69,
+    "notturnoFestivo": 22.71
+   },
+   "Sostituto Commissario Coordinatore": {
+    "diurno": 17.95,
+    "notturnoOFestivo": 20.3,
+    "notturnoFestivo": 23.42
+   },
+   "Vice Commissario": {
+    "diurno": 16.59,
+    "notturnoOFestivo": 18.76,
+    "notturnoFestivo": 21.65
+   },
+   "Commissario": {
+    "diurno": 17.95,
+    "notturnoOFestivo": 20.3,
+    "notturnoFestivo": 23.42
+   },
+   "Commissario Capo": {
+    "diurno": 18.26,
+    "notturnoOFestivo": 20.65,
+    "notturnoFestivo": 23.82
+   }
+  },
+  "assegnoFunzioneAnnuo": {
+   "truppa": {
+    "soglia17": 1448.4,
+    "soglia27": 2949.83,
+    "soglia32": 3392.3
+   },
+   "sovr": {
+    "soglia17": 1800.2,
+    "soglia27": 3018.2,
+    "soglia32": 3470.98
+   },
+   "isp": {
+    "soglia17": 1829.4,
+    "soglia27": 3070.5,
+    "soglia32": 3531.03
+   },
+   "funz": {
+    "soglia17": 900,
+    "soglia27": 1800,
+    "soglia32": 3531
+   }
+  },
+  "indennitaTurnoNotturnoOraria": 4.3,
+  "indennitaPresenzaFestivaTurno": 14,
+  "indennitaFestivitaParticolareGiorno": 40,
+  "indennitaCompensazioneRiposoLavorato": 12,
+  "indennitaCambioTurno": 10,
+  "indennitaProduttivitaCollettiva": 6.63,
+  "indennitaServizioEsternoTurno": 6,
+  "indennitaOPInSede": 13,
+  "indennitaOPFuoriSede": 26,
+  "riduzioneOPSenzaPernottamento": 30,
+  "indennitaControlloTerritorioSeraleFlat": 5,
+  "indennitaControlloTerritorioNotturnoFlat": 10,
+  "reperibilitaGiornaliera": 17.5,
+  "indennitaTrasfertaOraria": 0.86,
+  "indennitaTrasfertaOrariaRidotta": 0.344,
+  "sindacatoMensile": 8.5,
+  "aliquotaPrevidenziale": 9.19,
+  "irpefScaglioni": [
+   {
+    "fino": 28000,
+    "aliquota": 23
+   },
+   {
+    "fino": 50000,
+    "aliquota": 33
+   },
+   {
+    "fino": null,
+    "aliquota": 43
+   }
+  ],
+  "noTaxAreaAnnua": 8500,
+  "detrazioneLavoroMensile": 95,
+  "detrazioneConiugeACaricoAnnua": 690,
+  "detrazionePerFiglioOver21Annua": 950,
+  "trattamentoIntegrativoMensile": 100,
+  "sogliaTrattamentoIntegrativoAnnua": 28000,
+  "sogliaDetassazioneAccessoriAnnua": 800,
+  "aliquotaDetassazioneAccessori": 15,
+  "buonoPastoValore": 7,
+  "regioniAddizionale": {
+   "Abruzzo": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 28000,
+      "aliquota": 1.67
+     },
+     {
+      "fino": 50000,
+      "aliquota": 2.87
+     },
+     {
+      "fino": null,
+      "aliquota": 3.33
+     }
+    ]
+   },
+   "Basilicata": {
+    "tipo": "unica",
+    "valore": 1.23
+   },
+   "Calabria": {
+    "tipo": "unica",
+    "valore": 1.73
+   },
+   "Campania": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.73
+     },
+     {
+      "fino": 28000,
+      "aliquota": 2.96
+     },
+     {
+      "fino": 50000,
+      "aliquota": 3.2
+     },
+     {
+      "fino": null,
+      "aliquota": 3.33
+     }
+    ]
+   },
+   "Emilia-Romagna": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.33
+     },
+     {
+      "fino": 28000,
+      "aliquota": 1.93
+     },
+     {
+      "fino": 50000,
+      "aliquota": 2.78
+     },
+     {
+      "fino": null,
+      "aliquota": 3.33
+     }
+    ]
+   },
+   "Friuli Venezia Giulia": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 0.7
+     },
+     {
+      "fino": 28000,
+      "aliquota": 1.23
+     },
+     {
+      "fino": 50000,
+      "aliquota": 1.23
+     },
+     {
+      "fino": null,
+      "aliquota": 1.23
+     }
+    ]
+   },
+   "Lazio": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.73
+     },
+     {
+      "fino": 28000,
+      "aliquota": 3.33
+     },
+     {
+      "fino": 50000,
+      "aliquota": 3.33
+     },
+     {
+      "fino": null,
+      "aliquota": 3.33
+     }
+    ]
+   },
+   "Liguria": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 28000,
+      "aliquota": 1.23
+     },
+     {
+      "fino": 50000,
+      "aliquota": 3.18
+     },
+     {
+      "fino": null,
+      "aliquota": 3.23
+     }
+    ]
+   },
+   "Lombardia": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.23
+     },
+     {
+      "fino": 28000,
+      "aliquota": 1.58
+     },
+     {
+      "fino": 50000,
+      "aliquota": 1.72
+     },
+     {
+      "fino": null,
+      "aliquota": 1.73
+     }
+    ]
+   },
+   "Marche": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.23
+     },
+     {
+      "fino": 28000,
+      "aliquota": 1.53
+     },
+     {
+      "fino": 50000,
+      "aliquota": 1.7
+     },
+     {
+      "fino": null,
+      "aliquota": 1.73
+     }
+    ]
+   },
+   "Molise": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.73
+     },
+     {
+      "fino": 28000,
+      "aliquota": 1.93
+     },
+     {
+      "fino": 50000,
+      "aliquota": 3.33
+     },
+     {
+      "fino": null,
+      "aliquota": 3.33
+     }
+    ]
+   },
+   "Piemonte": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.62
+     },
+     {
+      "fino": 28000,
+      "aliquota": 2.68
+     },
+     {
+      "fino": 50000,
+      "aliquota": 3.31
+     },
+     {
+      "fino": null,
+      "aliquota": 3.33
+     }
+    ]
+   },
+   "Provincia di Bolzano": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 28000,
+      "aliquota": 1.23
+     },
+     {
+      "fino": 50000,
+      "aliquota": 1.23
+     },
+     {
+      "fino": null,
+      "aliquota": 1.73
+     }
+    ]
+   },
+   "Provincia di Trento": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.23
+     },
+     {
+      "fino": 28000,
+      "aliquota": 1.23
+     },
+     {
+      "fino": 50000,
+      "aliquota": 1.23
+     },
+     {
+      "fino": null,
+      "aliquota": 1.73
+     }
+    ]
+   },
+   "Puglia": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.33
+     },
+     {
+      "fino": 28000,
+      "aliquota": 1.43
+     },
+     {
+      "fino": 50000,
+      "aliquota": 1.63
+     },
+     {
+      "fino": null,
+      "aliquota": 1.85
+     }
+    ]
+   },
+   "Sardegna": {
+    "tipo": "unica",
+    "valore": 1.23
+   },
+   "Sicilia": {
+    "tipo": "unica",
+    "valore": 1.23
+   },
+   "Toscana": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.42
+     },
+     {
+      "fino": 28000,
+      "aliquota": 1.43
+     },
+     {
+      "fino": 50000,
+      "aliquota": 3.32
+     },
+     {
+      "fino": null,
+      "aliquota": 3.33
+     }
+    ]
+   },
+   "Umbria": {
+    "tipo": "scaglioni",
+    "scaglioni": [
+     {
+      "fino": 15000,
+      "aliquota": 1.73
+     },
+     {
+      "fino": 28000,
+      "aliquota": 3.02
+     },
+     {
+      "fino": 50000,
+      "aliquota": 3.12
+     },
+     {
+      "fino": null,
+      "aliquota": 3.33
+     }
+    ]
+   },
+   "Valle d'Aosta": {
+    "tipo": "unica",
+    "valore": 1.23
+   },
+   "Veneto": {
+    "tipo": "unica",
+    "valore": 1.23
+   }
+  }
+ }
+}
