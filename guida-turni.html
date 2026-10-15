@@ -1,28 +1,30 @@
 <!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Guida — Turni & Accessorio PS</title>
-<meta name="description" content="Come si usa Turni & Accessorio PS: calendario, turni automatici, Report, Assenze e saldi di partenza.">
+<meta name="description" content="Come si usa Turni & Accessorio PS: calendario, indennità, turni automatici, Report, Assenze e saldi di partenza, promemoria, widget e backup.">
 <style>
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:760px;margin:0 auto;padding:20px 16px 60px;line-height:1.55;color:#1E2129;background:#ECEFEA}
 h1{font-size:1.45rem;color:#1B2440;margin:0 0 4px}h2{font-size:1.15rem;color:#1B2440;margin:34px 0 8px;scroll-margin-top:12px}
-h3{font-size:.98rem;color:#1B2440;margin:16px 0 4px}
+h3{font-size:.98rem;color:#1B2440;margin:18px 0 4px;scroll-margin-top:12px}
 .agg{color:#666B63;font-size:.85rem;margin:0 0 14px}
 nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:6px}nav a{flex:0 0 auto;background:#fff;border:1px solid #D7D9CD;border-radius:999px;padding:6px 12px;font-size:.85rem;color:#1B2440;text-decoration:none}
-.box{background:#fff;border:1px solid #D7D9CD;border-radius:14px;padding:14px 16px;margin:10px 0}
 .sez{display:grid;grid-template-columns:1fr 200px;gap:18px;align-items:start}
 .sez img{width:200px;border-radius:22px;border:6px solid #1B2440;box-shadow:0 6px 20px rgba(27,36,64,.18);display:block}
-.sez ol,.sez ul{margin:6px 0;padding-left:20px}.sez li{margin:5px 0}
+ol,ul{margin:6px 0;padding-left:20px}li{margin:5px 0}
 .cons{background:#EEF2FB;border:1px solid #CBD5F0;border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
 .att{background:#FFF7E0;border:1px solid #F2D58A;border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.tab{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid #D7D9CD;border-radius:12px;overflow:hidden;font-size:.88rem;margin:8px 0}
+.tab th,.tab td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid #ECEDE6}
+.tab tr:last-child td{border-bottom:0}.tab th{background:#F5F6F1;color:#1B2440;font-size:.8rem}
+.tab td:first-child{font-weight:700;color:#1B2440;white-space:nowrap}
 details{background:#fff;border:1px solid #D7D9CD;border-radius:12px;padding:10px 14px;margin:8px 0}
 details summary{cursor:pointer;font-weight:700;color:#1B2440}details p{margin:8px 0 2px}
-kbd{background:#fff;border:1px solid #D7D9CD;border-bottom-width:2px;border-radius:6px;padding:0 5px;font-family:inherit;font-size:.88em}
 .nota{font-size:.82rem;color:#666B63;margin:6px 2px}
 a{color:#2E4A8F}
-@media(max-width:600px){.sez{grid-template-columns:1fr}.sez img{width:min(240px,70vw);margin:4px auto 0}}
+@media(max-width:600px){.sez{grid-template-columns:1fr}.sez img{width:min(240px,70vw);margin:4px auto 0}.tab td:first-child{white-space:normal}}
 </style></head><body>
 <h1>Guida a Turni & Accessorio PS</h1>
 <p class="agg">Come si usa l'app, passo per passo · aggiornata alla versione 2.84</p>
-<nav><a href="#inizio">Primi passi</a><a href="#calendario">Calendario</a><a href="#sequenza">Turni automatici</a><a href="#report">Report</a><a href="#assenze">Assenze</a><a href="#altro">Altro</a><a href="#domande">Domande</a></nav>
+<nav><a href="#inizio">Primi passi</a><a href="#calendario">Calendario</a><a href="#giorno">Il giorno e le indennità</a><a href="#sequenza">Turni</a><a href="#report">Report</a><a href="#assenze">Assenze</a><a href="#altro">Altro</a><a href="#promemoria">Promemoria e widget</a><a href="#backup">Backup</a><a href="#domande">Domande</a></nav>
 
 <h2 id="inizio">1. Primi passi</h2>
 <div class="sez"><div>
@@ -42,46 +44,96 @@ a{color:#2E4A8F}
 <ul>
 <li><b>Tocca un giorno</b> per vederlo sotto il calendario; <b>toccalo di nuovo</b> per cambiare il turno.</li>
 <li>Nella finestra "Cosa vuoi aggiungere?" scegli un <b>turno</b>, un'<b>assenza</b> o un'<b>indennità</b>. "Rientro" aggiunge un secondo turno nello stesso giorno.</li>
-<li><b>Modifica</b> apre il giorno completo: orari, straordinario prima o dopo, missione, ordine pubblico, reperibilità, cambio turno.</li>
+<li><b>Modifica</b> apre il giorno completo (vedi il capitolo successivo).</li>
 <li><b>＋ Evento</b> aggiunge visite, corsi, appuntamenti, anche ripetuti, con promemoria.</li>
 <li>I giorni del mese prima e dopo si vedono sbiaditi, per capire come continua la turnazione.</li>
 </ul>
 </div><img src="turni/guida/calendario.jpg" alt="Calendario del mese" loading="lazy"></div>
+<h3>Simboli delle indennità</h3>
+<p>Nelle caselle compaiono piccoli simboli per le indennità del giorno (missione, ordine pubblico, reperibilità…). In <b>Altro → Indennità nel calendario</b> scegli quali mostrare. All'inizio servizio esterno, buono pasto e controllo del territorio sono nascosti, perché ci sono quasi ogni giorno.</p>
+<div class="cons">💡 Nascondere un simbolo cambia solo la vista: l'indennità viene <b>sempre contata</b> nei calcoli.</div>
 <h3>Agenda sotto il calendario</h3>
 <div class="sez"><div>
 <p>In <b>Altro → Agenda sotto il calendario</b> puoi far comparire, sotto il mese, i prossimi 14 giorni in elenco: turno, orario, ore, indennità ed eventi, con il totale delle ore di ogni settimana.</p>
 </div><img src="turni/guida/agenda.jpg" alt="Agenda dei prossimi 14 giorni" loading="lazy"></div>
 
-<h2 id="sequenza">3. Turni automatici</h2>
+<h2 id="giorno">3. Il giorno e le indennità</h2>
 <div class="sez"><div>
+<p>Con <b>Modifica</b> si apre la scheda del giorno. In alto scegli <b>Turno</b>, <b>Riposo</b> o <b>Assenza</b>.</p>
+<ul>
+<li><b>Turno</b>: scegli un tuo modello o scrivi inizio e fine. Sotto vedi subito come vengono divise le ore (diurne, notturne, festive).</li>
+<li><b>Indennità</b>: tocca quelle del giorno. Alcune chiedono un dato in più (ore di missione, ordine pubblico in sede o fuori sede).</li>
+<li><b>Straordinario</b>: scrivi le ore e se sono <b>prima</b> o <b>dopo</b> il turno; l'orario esatto è facoltativo. Con "Mettilo a riposo compensativo" non va in paga ma diventa ore di riposo in Assenze.</li>
+<li><b>Altro</b>: rientro (secondo turno), permesso breve e recupero del permesso breve, con gli orari.</li>
+</ul>
+<p>Un giorno segnato come <b>assenza</b> non dà nessuna indennità, anche se era rimasta spuntata.</p>
+</div><img src="turni/guida/giorno.jpg" alt="La scheda del giorno" loading="lazy"></div>
+<h3>Come vengono contate</h3>
+<table class="tab">
+<tr><th>Voce</th><th>Quando spetta nell'app</th></tr>
+<tr><td>Turno notturno</td><td>In automatico, per ogni ora lavorata tra le 22 e le 6.</td></tr>
+<tr><td>Presenza festiva</td><td>In automatico, se lavori di domenica o in un giorno festivo. Nei festivi del calendario (es. Natale, 2 giugno, Pasquetta) c'è un'indennità in più.</td></tr>
+<tr><td>Controllo del territorio</td><td>Se la spunti e fai almeno <b>3 ore</b> nella fascia serale (18–22) o notturna (22–6). Vale la fascia dove fai più ore; a parità, serale. <b>Non</b> si somma all'ordine pubblico: con tutti e due non viene calcolato.</td></tr>
+<tr><td>Ordine pubblico</td><td>Turni di almeno <b>4 ore</b>. Importo diverso in sede o fuori sede; fuori sede senza pernottamento è ridotto.</td></tr>
+<tr><td>Servizio esterno</td><td>Turni di almeno <b>3 ore</b>. Se nello stesso turno c'è anche l'ordine pubblico, si paga solo l'ordine pubblico.</td></tr>
+<tr><td>Missione</td><td>Sulle ore di missione: niente fino a 4 ore, tariffa piena da 4 a 8 ore, ridotta oltre le 8. Il rimborso dei pasti su ricevuta non è calcolato.</td></tr>
+<tr><td>Reperibilità</td><td>Un importo per ogni giorno segnato.</td></tr>
+<tr><td>Cambio turno</td><td>Un importo per ogni giorno segnato.</td></tr>
+<tr><td>Lavorato sul riposo</td><td>L'indennità e <b>un giorno di Recupero riposo</b> in Assenze.</td></tr>
+<tr><td>Lavorato in festivo</td><td><b>Un giorno di Recupero festivo</b> in Assenze.</td></tr>
+<tr><td>Buono pasto</td><td>Contato a parte nel Report, "fuori busta paga".</td></tr>
+<tr><td>Straordinario</td><td>Tariffa oraria della tua qualifica: diurna, notturna o festiva, notturna e festiva.</td></tr>
+</table>
+<p class="nota">Gli importi sono quelli delle <a href="tabelle-turni.html">tabelle ufficiali</a>. La produttività collettiva arriva una volta l'anno, a luglio, in base ai giorni di presenza dell'anno prima.</p>
+
+<h2 id="sequenza">4. Turni</h2>
+<div class="sez"><div>
+<h3 style="margin-top:0">Turni automatici</h3>
 <p>In <b>Turni → Genera turni automaticamente</b>:</p>
 <ol>
 <li>scegli la sequenza (o creane una tua con i tuoi turni);</li>
 <li>indica cosa fai il primo giorno;</li>
 <li>premi <b>Genera</b>: l'app riempie i giorni fino alla data scelta. Ferie e assenze già inserite non vengono toccate.</li>
 </ol>
-<p>Quando la sequenza sta per finire, l'app te lo ricorda: con <b>Continua</b> riparte dal giorno giusto senza sfasare il ciclo.</p>
-<p>In <b>Turni</b> trovi anche i tuoi modelli di turno (orari e colori), l'esportazione in Google Calendar e i colori del calendario.</p>
+<p>Quando la sequenza sta per finire, l'app te lo ricorda: con <b>Continua la sequenza</b> riparte dal giorno giusto senza sfasare il ciclo.</p>
 </div><img src="turni/guida/turni.jpg" alt="Scheda Turni" loading="lazy"></div>
+<h3>I tuoi modelli di turno</h3>
+<p>In <b>Turni → I tuoi turni</b> trovi i modelli (es. 07–13, 19–24) con orario, nome e colore. Tocca un modello per cambiarlo o creane uno nuovo. Se cambi l'orario di un modello, l'app chiede cosa aggiornare:</p>
+<ul>
+<li><b>da oggi in poi</b>: i turni passati restano come sono;</li>
+<li><b>tutti, anche il passato</b>;</li>
+<li><b>solo i turni che inserirò</b>: il calendario non cambia.</li>
+</ul>
+<p>In <b>Colori e stile calendario</b> scegli i colori dei turni e lo stile Classico o Moderno.</p>
+<h3>Esportare in Google Calendar</h3>
+<ol>
+<li><b>Turni → Esporta in Google Calendar</b>: scegli il mese visualizzato, i prossimi 3 mesi o tutto l'anno, e se includere riposi e assenze.</li>
+<li>Salva il file (o mandalo a te stesso per email).</li>
+<li>Dal computer apri <b>calendar.google.com</b> → ⚙️ Impostazioni → <b>Importa ed esporta</b> → Importa, e scegli il file. I turni compaiono anche sul telefono.</li>
+</ol>
+<div class="cons">💡 Prima crea un calendario a parte chiamato "Turni" e importa lì: se cambi turnazione, lo cancelli e lo rifai senza toccare il resto. Se ti arriva un'email prima di ogni turno, la manda Google Calendar: si toglie dalle "Notifiche evento" di quel calendario.</div>
 
-<h2 id="report">4. Report</h2>
+<h2 id="report">5. Report</h2>
 <div class="sez"><div>
 <ul>
-<li>In alto: quanto <b>arriva sul conto</b> nel mese, con stipendio, indennità e tasse.</li>
+<li>In alto: quanto <b>arriva sul conto</b> nel mese, con stipendio, indennità e tasse. Con ‹ › cambi mese.</li>
 <li><b>Il mese</b>: turni, riposi, ore, straordinario e le indennità con <b>lordo e netto</b>.</li>
-<li>Il <b>cedolino</b> stimato con lordo, trattenute e netto, e lo storico dell'anno.</li>
+<li><b>Statistiche dell'anno</b> e <b>cedolino</b> stimato con lordo, trattenute e netto.</li>
+<li>Con <b>⚙️</b> in alto scegli quali di queste parti vedere.</li>
 </ul>
 <div class="att">⚠️ È una <b>stima</b>. Il netto vero può essere diverso di qualche euro: arretrati, conguagli, addizionali comunali, detrazioni personali. Confronta sempre con il cedolino ufficiale.</div>
-<p class="nota">Le indennità e gli straordinari di un mese arrivano in busta due mesi dopo: il Report lo tiene già in conto.</p>
+<p class="nota">Lo stipendio arriva il mese dopo quello lavorato; indennità e straordinari due mesi dopo (quelli di settembre a novembre). La tredicesima arriva a dicembre. Il Report lo tiene già in conto.</p>
 </div><img src="turni/guida/report.jpg" alt="Report del mese" loading="lazy"></div>
 
-<h2 id="assenze">5. Assenze</h2>
+<h2 id="assenze">6. Assenze</h2>
 <div class="sez"><div>
 <ul>
 <li>In alto: quanti <b>giorni di congedo ordinario</b> ti restano, più permesso breve e recuperi.</li>
 <li>Ogni voce ha la sua scheda con l'<b>anello</b>: pieno quando è tutta da usare, si svuota man mano.</li>
-<li>Tocca una scheda per i dettagli e per cambiare quanto spetta.</li>
+<li>Tocca una scheda per i dettagli e per cambiare <b>quanto spetta</b>.</li>
+<li>Per usare un'assenza: nel calendario tocca il giorno → <b>Assenza</b> → scegli quale.</li>
 </ul>
+</div><img src="turni/guida/assenze.jpg" alt="Assenze e permessi" loading="lazy"></div>
 <h3>Saldi di partenza</h3>
 <p>L'app non può sapere quanti giorni avevi prima di usarla. Con <b>Inserisci i saldi di partenza</b> (o <b>Correggi</b>) scrivi:</p>
 <ul>
@@ -90,26 +142,73 @@ a{color:#2E4A8F}
 <li>le ore di <b>riposo compensativo</b> accumulate.</li>
 </ul>
 <p>Da quel giorno conta l'app: toglie i giorni che segni in calendario e a gennaio aggiunge quelli dell'anno nuovo.</p>
-</div><img src="turni/guida/assenze.jpg" alt="Assenze e permessi" loading="lazy"></div>
+<h3>Quanto spetta</h3>
+<p>I numeri di partenza qui sotto si cambiano nella scheda di ogni voce: <b>controlla il congedo ordinario</b>, perché dipende dalla tua situazione (anni di servizio, settimana su 5 o 6 giorni). Il numero che scrivi è quello che l'app aggiunge ogni gennaio.</p>
+<table class="tab">
+<tr><th>Voce</th><th>Come la conta l'app</th></tr>
+<tr><td>Congedo ordinario</td><td>Giorni all'anno (di partenza 30). Gli avanzi degli anni prima restano e si usano per primi.</td></tr>
+<tr><td>Congedo straordinario, riposo legge, donazione sangue</td><td>Giorni all'anno: ripartono da capo a gennaio.</td></tr>
+<tr><td>L104</td><td>Giorni al <b>mese</b> (di partenza 3).</td></tr>
+<tr><td>Permesso breve</td><td>Ore all'anno (di partenza 54). Si segna dentro il turno, con l'orario: quelle ore si tolgono dalle ore lavorate. Recuperarle non fa risalire il saldo: serve a non perdere la paga di quelle ore.</td></tr>
+<tr><td>Ore di studio, permesso sindacale</td><td>Ore all'anno.</td></tr>
+<tr><td>Recupero riposo / festivo</td><td>Automatici: +1 per ogni giorno "Lavorato sul riposo" o "Lavorato in festivo", −1 quando li usi.</td></tr>
+<tr><td>Riposo compensativo</td><td>Ore automatiche: salgono con lo straordinario messo a riposo, scendono quando lo usi indicando l'orario del turno sostituito.</td></tr>
+<tr><td>Aspettativa, maternità/paternità, congedo parentale</td><td>Solo per segnare i giorni sul calendario.</td></tr>
+</table>
+<p>Con <b>＋ Aggiungi assenza personalizzata</b> crei una voce tua: poi nella sua scheda le dai nome e quanto spetta.</p>
 
-<h2 id="altro">6. Altro</h2>
+<h2 id="altro">7. Altro</h2>
 <div class="sez"><div>
 <ul>
 <li><b>Anagrafica</b>: qualifica (con il distintivo del grado), anni, regione, famiglia, sindacato.</li>
 <li><b>Tabelle ufficiali</b>: stipendi, indennità e aliquote usati nei calcoli. Si aggiornano da sole dal sito (vedi <a href="tabelle-turni.html">Tabelle economiche</a>); le tue modifiche restano.</li>
-<li><b>Promemoria del turno</b> e <b>widget</b> sulla schermata Home.</li>
-<li><b>Tema</b> e <b>colore dell'app</b>.</li>
-<li><b>Segnala un problema o un'idea</b>: apre l'email già scritta.</li>
-<li><b>Backup</b>: salva tutti i dati in un file (sul telefono o su Google Drive).</li>
+<li><b>Indennità nel calendario</b>: quali simboli vedere.</li>
+<li><b>Tema</b> (Auto, Luce, Chiaro, Grigio, Nero) e <b>colore dell'app</b>.</li>
+<li><b>Guida all'app</b>: apre questa pagina.</li>
+<li><b>Segnala un problema o un'idea</b>: apre l'email già scritta, con versione e telefono.</li>
 </ul>
 </div><img src="turni/guida/altro.jpg" alt="Impostazioni in Altro" loading="lazy"></div>
 
-<h2 id="domande">7. Domande frequenti</h2>
-<details><summary>Ho cambiato telefono: come recupero i dati?</summary><p>Sul telefono vecchio: <b>Altro → Backup → Esporta backup</b> (oppure il backup su Google Drive). Sul telefono nuovo installa l'app e usa <b>Importa</b>. I dati stanno solo sul telefono: senza backup non si possono recuperare.</p></details>
+<h3 id="promemoria">Promemoria del turno</h3>
+<ol>
+<li>In <b>Altro</b> accendi <b>Promemoria del turno</b> (all'inizio è spento).</li>
+<li>Scegli <b>La sera prima</b> (e l'ora, es. 20:00) oppure <b>Prima dell'inizio</b> (30 minuti, 1 ora o 2 ore prima).</li>
+<li>La prima volta Android chiede il permesso per le notifiche: rispondi <b>Consenti</b>.</li>
+</ol>
+<div class="att">⚠️ Se i promemoria arrivano in ritardo o non arrivano: nelle impostazioni di Android → App → Turni & Accessorio PS → <b>Batteria</b>, scegli "Senza restrizioni". Il risparmio energetico di alcuni telefoni blocca le notifiche.</div>
+
+<h3>Widget nella schermata Home</h3>
+<p>Mostra il turno di <b>oggi e domani</b> senza aprire l'app.</p>
+<ol>
+<li>In <b>Altro</b> accendi <b>Widget nella schermata Home</b>.</li>
+<li>Premi <b>＋ Aggiungi alla schermata Home</b> e conferma.</li>
+<li>Se non compare: tieni premuto su uno spazio vuoto della schermata Home → <b>Widget</b> → cerca <b>Turni & Accessorio PS</b> → trascinalo dove vuoi.</li>
+</ol>
+
+<h3 id="backup">Backup</h3>
+<p>I dati stanno <b>solo sul telefono</b>. Se lo perdi o cancelli l'app senza backup, non si possono recuperare.</p>
+<p><b>Backup sul telefono</b> (gratis):</p>
+<ol>
+<li><b>Altro → Backup → 💾 Esporta backup</b>: crea un file con tutti i dati.</li>
+<li>Il file finisce di solito in <b>Download</b>, sullo stesso telefono: <b>spostalo al sicuro</b> (Google Drive, email a te stesso…).</li>
+<li>Per rimetterlo: <b>📥 Importa</b> e scegli il file. Se hai sbagliato, <b>↩️ Annulla ripristino</b> torna a com'era prima.</li>
+</ol>
+<p><b>Backup su Google Drive</b> (acquisto unico di 1,99 €):</p>
+<ol>
+<li>In <b>Altro → Backup</b> premi <b>Attiva</b> e completa l'acquisto su Google Play.</li>
+<li><b>☁️ Salva su Drive</b>: la prima volta scegli il tuo account Google.</li>
+<li>Spunta <b>Salva automaticamente ogni 3 giorni</b> per non pensarci più. Su Drive restano fino a 5 copie.</li>
+<li>Sul telefono nuovo: <b>📥 Ripristina da Drive</b> e scegli la copia.</li>
+</ol>
+
+<h2 id="domande">8. Domande frequenti</h2>
+<details><summary>Ho cambiato telefono: come recupero i dati?</summary><p>Sul telefono vecchio: <b>Altro → Backup → Esporta backup</b> e manda il file sul telefono nuovo (oppure usa il backup su Google Drive). Sul telefono nuovo installa l'app e usa <b>Importa</b> (o <b>Ripristina da Drive</b>).</p></details>
 <details><summary>Perché il netto non è uguale alla mia busta paga?</summary><p>L'app fa una stima con le tabelle ufficiali. Arretrati, conguagli di fine anno, addizionale comunale e detrazioni personali possono cambiare il netto vero di qualche euro.</p></details>
+<details><summary>Non vedo l'indennità di controllo del territorio</summary><p>Controlla che il turno abbia almeno 3 ore tra le 18 e le 22 o tra le 22 e le 6, e che non ci sia anche l'ordine pubblico. Il simbolo in calendario all'inizio è nascosto: si accende in <b>Altro → Indennità nel calendario</b>.</p></details>
 <details><summary>Ho sbagliato i giorni di congedo iniziali</summary><p>In <b>Assenze</b> tocca <b>Correggi</b> accanto a "Saldi di partenza" e scrivi i numeri che ti dà l'ufficio oggi.</p></details>
 <details><summary>Ho cambiato turnazione</summary><p>In <b>Turni → Genera turni automaticamente</b> scegli la nuova sequenza e la data da cui parte: i giorni da quella data vengono riscritti, ferie e assenze restano.</p></details>
-<details><summary>L'app manda i miei dati da qualche parte?</summary><p>No. Turni, stipendio e assenze restano sul telefono. L'app scarica solo il file pubblico delle tabelle dal sito, una volta a settimana. Vedi l'<a href="privacy-turni.html">informativa privacy</a>.</p></details>
+<details><summary>Il promemoria non arriva</summary><p>Controlla che le notifiche dell'app siano permesse e che la batteria dell'app sia "Senza restrizioni" nelle impostazioni di Android.</p></details>
+<details><summary>L'app manda i miei dati da qualche parte?</summary><p>No. Turni, stipendio e assenze restano sul telefono. L'app scarica solo il file pubblico delle tabelle dal sito, una volta a settimana. Il backup su Drive va solo nel tuo account Google. Vedi l'<a href="privacy-turni.html">informativa privacy</a>.</p></details>
 
 <p class="nota" style="margin-top:28px">App indipendente, non ufficiale, non affiliata alla Polizia di Stato. Le immagini sono fatte con dati di prova.</p>
 <p class="nota"><a href="index.html">← Home</a> · <a href="tabelle-turni.html">Tabelle</a> · <a href="privacy-turni.html">Privacy</a></p>
