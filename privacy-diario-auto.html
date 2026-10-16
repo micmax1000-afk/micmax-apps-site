@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Privacy Policy — Diario Auto</title>
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; line-height: 1.6; color: #1a1a1a; background: #faf8f3; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 760px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; line-height: 1.6; color: #1a1a1a; background: #faf8f3; }
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.2rem; margin-top: 2rem; border-bottom: 2px solid #f5901f; padding-bottom: 0.3rem; }
   table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
@@ -13,11 +13,21 @@
   th { background: #171c22; color: white; }
   a { color: #c9701a; }
   ul { padding-left: 1.3rem; }
+  .lang-switch { display: flex; justify-content: flex-end; gap: 0.4rem; }
+  .lang-switch a { padding: 0.3rem 0.8rem; border: 1px solid #ccc; border-radius: 999px; color: #1a1a1a; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+  .lang-switch a.is-active { background: #f5901f; border-color: #f5901f; }
+  article[hidden] { display: none; }
 </style>
 </head>
 <body>
+<nav class="lang-switch" aria-label="Lingua / Language">
+  <a href="#it" data-lang="it" class="is-active">IT</a>
+  <a href="#en" data-lang="en">EN</a>
+</nav>
+
+<article id="it" lang="it">
 <h1>Informativa sulla privacy — Diario Auto</h1>
-<p><strong>Ultimo aggiornamento</strong>: 9 ottobre 2026</p>
+<p><strong>Ultimo aggiornamento</strong>: 16 ottobre 2026</p>
 <h2>Il principio di fondo</h2>
 <p>Diario Auto è un'app <strong>locale</strong>: tutti i dati che inserisci (veicoli, rifornimenti, manutenzioni, spese, scadenze, sessioni diagnostiche) restano <strong>sul tuo dispositivo</strong>, nella memoria interna riservata all'app. Non esiste un account dello sviluppatore e non esiste un server dello sviluppatore che riceve o conserva i tuoi dati.</p>
 <h2>Dati che NON raccogliamo</h2>
@@ -29,20 +39,21 @@
 </ul>
 <h2>Dati che restano solo sul tuo dispositivo</h2>
 <ul>
-<li>Veicoli, rifornimenti, ricariche elettriche, manutenzioni, spese, scadenze, sessioni di diagnostica OBD2, impostazioni di tragitto</li>
+<li>Veicoli, rifornimenti, ricariche elettriche, manutenzioni, spese, scadenze, sessioni di diagnostica OBD2, impostazioni e scenari del tragitto</li>
 <li>Foto allegate ai veicoli, alle manutenzioni e alle spese</li>
-<li>Preferenze (lingua, tema chiaro/scuro, notifiche attive)</li>
+<li>Preferenze (lingua, valuta, unità di misura, tema chiaro/scuro, notifiche, backup automatico)</li>
 </ul>
 <p>Puoi cancellare tutto in qualsiasi momento cancellando i dati dell'app dalle impostazioni del tuo dispositivo, oppure disinstallando l'app.</p>
 <h2>Backup</h2>
 <p>L'app include un backup manuale: il file che generi lo salvi dove vuoi e resta sotto il tuo controllo, non viene inviato a noi. Con Diario Auto Pro puoi anche salvare una copia sul tuo Google Drive (vedi sotto).</p>
+<p><strong>Backup automatico settimanale (solo Pro)</strong>: dopo che hai fatto almeno un backup manuale su Google Drive, l'app carica da sola una nuova copia sul tuo Drive circa una volta a settimana, quando la apri e sei connesso. Usa lo stesso accesso Google che hai già autorizzato, senza chiederti nulla. Aggiunge un file su Drive e non modifica mai i dati sul telefono. Se i dati sul telefono risultano molto meno dell'ultimo backup (per esempio dopo una cancellazione accidentale), il backup automatico si ferma per non sostituire i backup buoni. Puoi disattivarlo in qualsiasi momento dalla sezione Backup dell'app.</p>
 <h2>Servizi esterni contattati durante l'uso</h2>
 <p>Alcune funzionalità dell'app contattano servizi di terze parti. Questi servizi ricevono solo le informazioni strettamente necessarie alla funzione richiesta, non il resto dei tuoi dati:</p>
 <table>
 <tr><th>Funzione</th><th>Servizio contattato</th><th>Cosa viene inviato</th></tr>
 <tr><td>Ricerca indirizzi (tragitto casa-lavoro)</td><td>Nominatim (nominatim.openstreetmap.org)</td><td>Testo dell'indirizzo cercato</td></tr>
 <tr><td>Calcolo percorso tragitto casa-lavoro</td><td>OSRM (router.project-osrm.org)</td><td>Coordinate di partenza e destinazione</td></tr>
-<tr><td>Backup su Google Drive (funzione opzionale, da attivare tu)</td><td>Google (accesso Google + Google Drive API)</td><td>Il tuo indirizzo email Google, usato solo per identificare l'accesso, e il contenuto del backup che scegli di caricare. L'app può vedere e gestire <strong>solo i file che crea lei stessa</strong> su Drive (permesso "drive.file"), mai il resto del tuo Drive. Dopo ogni salvataggio l'app tiene gli ultimi 5 backup e sposta i più vecchi nel cestino di Drive, da cui puoi recuperarli per 30 giorni. I dati vanno direttamente dal tuo dispositivo a Google: lo sviluppatore non li riceve. Gestito secondo la <a href="https://policies.google.com/privacy">Privacy Policy di Google</a>.</td></tr>
+<tr><td>Backup su Google Drive, manuale o automatico (funzione opzionale, da attivare tu)</td><td>Google (accesso Google + Google Drive API)</td><td>Il tuo indirizzo email Google, usato solo per identificare l'accesso, e il contenuto del backup. L'app può vedere e gestire <strong>solo i file che crea lei stessa</strong> su Drive (permesso "drive.file"), mai il resto del tuo Drive. Dopo ogni salvataggio l'app tiene gli ultimi 5 backup (manuali e automatici insieme) e sposta i più vecchi nel cestino di Drive, da cui puoi recuperarli per 30 giorni. I dati vanno direttamente dal tuo dispositivo a Google: lo sviluppatore non li riceve. Gestito secondo la <a href="https://policies.google.com/privacy">Privacy Policy di Google</a>.</td></tr>
 <tr><td>Acquisto Diario Auto Pro</td><td>Google Play Billing</td><td>Gestito interamente da Google secondo la <a href="https://policies.google.com/privacy">Privacy Policy di Google</a>; Diario Auto riceve solo la conferma dell'acquisto, non dati di pagamento</td></tr>
 </table>
 <p>Le funzioni base dell'app (registro rifornimenti, manutenzioni, scadenze, spese) funzionano anche senza connessione.</p>
@@ -51,9 +62,9 @@
 <ul>
 <li><strong>Internet</strong>: per i servizi esterni elencati sopra.</li>
 <li><strong>Bluetooth</strong>: solo se usi la diagnostica OBD2, per collegarti al tuo adattatore Bluetooth. I dati letti dall'auto restano sul dispositivo.</li>
-<li><strong>Notifiche</strong>: solo se le attivi tu, per gli avvisi di scadenze imminenti — generate e mostrate interamente sul tuo dispositivo.</li>
+<li><strong>Notifiche</strong>: per gli avvisi delle scadenze (30 giorni prima, 7 giorni prima e il giorno stesso). Quando hai delle scadenze l'app chiede il permesso ad Android; puoi rifiutare, oppure disattivarle quando vuoi dalle impostazioni dell'app o di Android. Gli avvisi sono generati e mostrati interamente sul tuo dispositivo.</li>
 <li><strong>Foto</strong>: solo se alleghi una foto a un veicolo, a una manutenzione o a una spesa — l'immagine resta salvata localmente (compressa), non viene caricata da nessuna parte.</li>
-<li><strong>Accesso Google</strong>: richiesto solo se scegli di attivare il backup su Google Drive. Puoi revocare l'accesso in qualsiasi momento dalla pagina <a href="https://myaccount.google.com/permissions">Accesso Google di terze parti</a> del tuo account Google.</li>
+<li><strong>Accesso Google</strong>: richiesto solo se scegli di attivare il backup su Google Drive. Puoi revocare l'accesso in qualsiasi momento dalla pagina <a href="https://myaccount.google.com/permissions">Accesso Google di terze parti</a> del tuo account Google; da quel momento anche il backup automatico si ferma.</li>
 </ul>
 <h2>Cancellazione dei dati</h2>
 <ul>
@@ -66,5 +77,85 @@
 <p>Se in futuro Diario Auto introdurrà funzionalità che richiedono un account o una sincronizzazione cloud, questa informativa sarà aggiornata <strong>prima</strong> dell'attivazione di quelle funzionalità, con indicazione chiara di cosa cambia.</p>
 <h2>Contatti</h2>
 <p>Per domande su questa informativa: <a href="mailto:mic.max.1000@gmail.com">mic.max.1000@gmail.com</a></p>
+</article>
+
+<article id="en" lang="en" hidden>
+<h1>Privacy Policy — Diario Auto</h1>
+<p><strong>Last updated</strong>: October 16, 2026</p>
+<h2>The basic principle</h2>
+<p>Diario Auto is a <strong>local</strong> app: all the data you enter (vehicles, refuels, maintenance, expenses, deadlines, diagnostic sessions) stays <strong>on your device</strong>, in the app's private internal storage. There is no developer account and no developer server that receives or stores your data.</p>
+<h2>Data we do NOT collect</h2>
+<ul>
+<li>We do not create a user account and do not ask for your email, name or personal details to use the app</li>
+<li>We do not track how you use the app (no analytics, no tracking pixels)</li>
+<li>We do not show ads and do not share data with advertisers</li>
+<li>We do not send the data you enter about vehicles, refuels, maintenance, expenses or deadlines to any server of ours</li>
+</ul>
+<h2>Data that stays only on your device</h2>
+<ul>
+<li>Vehicles, refuels, electric charges, maintenance, expenses, deadlines, OBD2 diagnostic sessions, commute settings and scenarios</li>
+<li>Photos attached to vehicles, maintenance and expenses</li>
+<li>Preferences (language, currency, units, light/dark theme, notifications, automatic backup)</li>
+</ul>
+<p>You can delete everything at any time by clearing the app's data in your device settings, or by uninstalling the app.</p>
+<h2>Backup</h2>
+<p>The app includes a manual backup: you save the file wherever you want and it stays under your control; it is never sent to us. With Diario Auto Pro you can also save a copy to your Google Drive (see below).</p>
+<p><strong>Weekly automatic backup (Pro only)</strong>: after you have made at least one manual backup to Google Drive, the app uploads a new copy to your Drive by itself about once a week, when you open it and are online. It uses the Google access you have already authorized, without asking you anything. It adds a file on Drive and never changes the data on your phone. If the data on your phone is much less than in the last backup (for example after an accidental deletion), the automatic backup stops so that it does not replace your good backups. You can turn it off at any time in the app's Backup section.</p>
+<h2>External services contacted during use</h2>
+<p>Some features of the app contact third-party services. These services only receive the information strictly needed for the requested feature, not the rest of your data:</p>
+<table>
+<tr><th>Feature</th><th>Service contacted</th><th>What is sent</th></tr>
+<tr><td>Address search (home-to-work commute)</td><td>Nominatim (nominatim.openstreetmap.org)</td><td>The text of the address you search for</td></tr>
+<tr><td>Commute route calculation</td><td>OSRM (router.project-osrm.org)</td><td>Start and destination coordinates</td></tr>
+<tr><td>Google Drive backup, manual or automatic (optional feature, you turn it on)</td><td>Google (Google sign-in + Google Drive API)</td><td>Your Google email address, used only to identify the sign-in, and the content of the backup. The app can see and manage <strong>only the files it creates itself</strong> on Drive ("drive.file" permission), never the rest of your Drive. After each save the app keeps the last 5 backups (manual and automatic together) and moves older ones to the Drive trash, where you can recover them for 30 days. Data goes directly from your device to Google: the developer does not receive it. Handled according to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</td></tr>
+<tr><td>Diario Auto Pro purchase</td><td>Google Play Billing</td><td>Handled entirely by Google according to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>; Diario Auto only receives the purchase confirmation, no payment details</td></tr>
+</table>
+<p>The app's basic features (refuel log, maintenance, deadlines, expenses) also work offline.</p>
+<p>The use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Data received from Google is used only to save and restore your backup: it is not used for advertising and not shared with third parties.</p>
+<h2>Device permissions requested</h2>
+<ul>
+<li><strong>Internet</strong>: for the external services listed above.</li>
+<li><strong>Bluetooth</strong>: only if you use OBD2 diagnostics, to connect to your Bluetooth adapter. Data read from the car stays on the device.</li>
+<li><strong>Notifications</strong>: for deadline reminders (30 days before, 7 days before and on the day). When you have deadlines the app asks Android for permission; you can refuse, or turn them off at any time in the app or Android settings. Reminders are created and shown entirely on your device.</li>
+<li><strong>Photos</strong>: only if you attach a photo to a vehicle, maintenance or expense — the image is stored locally (compressed) and is not uploaded anywhere.</li>
+<li><strong>Google sign-in</strong>: required only if you choose to turn on Google Drive backup. You can revoke access at any time from the <a href="https://myaccount.google.com/permissions">Third-party access</a> page of your Google account; from then on the automatic backup stops too.</li>
+</ul>
+<h2>Deleting your data</h2>
+<ul>
+<li><strong>Data on the device</strong>: clear the app's data in Android settings, or uninstall the app.</li>
+<li><strong>Backups on Google Drive</strong>: they are your files; you can delete them at any time from Google Drive. Uninstalling the app does not delete them.</li>
+</ul>
+<h2>Children</h2>
+<p>Diario Auto is not specifically aimed at children and does not knowingly collect data from children under 16. The only personal data the app may handle (your Google email) is requested only if the user voluntarily chooses to turn on Drive backup.</p>
+<h2>Changes to this policy</h2>
+<p>If Diario Auto introduces features that require an account or cloud sync in the future, this policy will be updated <strong>before</strong> those features are turned on, clearly stating what changes.</p>
+<h2>Contact</h2>
+<p>For questions about this policy: <a href="mailto:mic.max.1000@gmail.com">mic.max.1000@gmail.com</a></p>
+</article>
+
+<script>
+  (function () {
+    var links = document.querySelectorAll(".lang-switch a");
+    function show(lang) {
+      if (lang !== "it" && lang !== "en") lang = "en";
+      document.documentElement.lang = lang;
+      document.getElementById("it").hidden = lang !== "it";
+      document.getElementById("en").hidden = lang !== "en";
+      for (var i = 0; i < links.length; i++) links[i].classList.toggle("is-active", links[i].getAttribute("data-lang") === lang);
+    }
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function (e) {
+        e.preventDefault();
+        var lang = this.getAttribute("data-lang");
+        show(lang);
+        history.replaceState(null, "", "#" + lang);
+      });
+    }
+    // #it / #en nel link, altrimenti la lingua del telefono: italiano solo per chi lo usa, inglese per tutti gli altri.
+    var hash = location.hash.replace("#", "");
+    var device = (navigator.language || "en").slice(0, 2).toLowerCase();
+    show(hash === "it" || hash === "en" ? hash : device === "it" ? "it" : "en");
+  })();
+</script>
 </body>
-</html>
+  </html>
