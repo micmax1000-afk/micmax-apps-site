@@ -3,20 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Schengen Days Calculator</title>
+  <title>Privacy Policy — Schengen Days Unofficial</title>
   <style>
     body { font-family: system-ui, sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #14213d; }
     h1 { font-size: 1.5rem; }
     h2 { font-size: 1.1rem; margin-top: 2em; }
     footer { margin-top: 3em; font-size: 0.85rem; color: #5b6470; }
+    .lang-nav { display: flex; gap: 8px; margin: 0 0 1.5em; }
+    .lang-nav a { padding: 4px 12px; border: 1px solid #e4e0d6; border-radius: 999px; color: #14213d; text-decoration: none; font-size: 0.9rem; }
+    .lang-nav a:hover { background: #f6f4ef; }
+    section + section { margin-top: 3.5em; padding-top: 2em; border-top: 2px solid #e4e0d6; }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy — Schengen Days Calculator</h1>
-  <p><em>Ultimo aggiornamento: 6 ottobre 2026</em></p>
+  <nav class="lang-nav" aria-label="Lingua / Language">
+    <a href="#it" lang="it">Italiano</a>
+    <a href="#en" lang="en">English</a>
+  </nav>
+
+  <section id="it" lang="it">
+  <h1>Privacy Policy — Schengen Days Unofficial</h1>
+  <p><em>Ultimo aggiornamento: ottobre 2026</em></p>
 
   <p>
-    Schengen Days Calculator è un'applicazione indipendente, gratuita e non
+    Schengen Days Unofficial è un'applicazione indipendente, gratuita e non
     affiliata a governi, istituzioni o all'Unione Europea. Non è un servizio
     ufficiale e non sostituisce alcuna verifica o dichiarazione richiesta
     dalle autorità di frontiera.
@@ -83,10 +93,89 @@
 
   <h2>Contatti</h2>
   <p>
-    Per domande su questa privacy policy puoi scrivere a
-    <a href="mailto:mic.max.1000@gmail.com">mic.max.1000@gmail.com</a>.
+    Per domande su questa privacy policy, apri una segnalazione sulla
+    repository del progetto su GitHub.
+  </p>
+  </section>
+
+  <section id="en" lang="en">
+  <h1>Privacy Policy — Schengen Days Unofficial</h1>
+  <p><em>Last updated: October 2026</em></p>
+
+  <p>
+    Schengen Days Unofficial is an independent, free app that is not
+    affiliated with any government, institution, or the European Union. It
+    is not an official service and does not replace any verification or
+    declaration required by border authorities.
   </p>
 
-  <footer>Schengen Days Calculator — app indipendente e gratuita. <a href="index.html">MicMax Apps</a></footer>
+  <h2>No guarantee of accuracy</h2>
+  <p>
+    This app is provided <strong>for informational purposes only</strong>,
+    "as is," without any guarantee of the accuracy of the calculations. We
+    assume <strong>no liability</strong> for any calculation errors, delays,
+    inconveniences, or consequences — including any penalties or denials of
+    entry — arising from the use of this app. Before traveling, always
+    verify your days on the official websites of the relevant European
+    authorities (e.g., the European Commission's official calculator) or by
+    contacting border authorities.
+  </p>
+
+  <h2>What data we collect</h2>
+  <p>
+    None. The app does not have a server, does not require an account, and
+    does not collect, transmit, or sell any personal data. All the
+    information you enter (travel dates, countries, notes) is stored
+    <strong>exclusively on your device</strong>, in the local storage of your
+    browser or the app.
+  </p>
+
+  <h2>Backup and export</h2>
+  <p>
+    The backup feature creates a .json file that remains under your control.
+    If you choose to share it (e.g., via your phone's share menu to Google
+    Drive, email, or other apps), that transfer takes place directly between
+    your device and the service you choose: the app is not involved in that
+    step and does not have access to the content once it has been shared.
+  </p>
+
+  <h2>Official sources</h2>
+  <p>
+    This app applies the "90 out of 180" rule established by the European
+    Union authorities. You can consult the official sources directly:
+  </p>
+  <ul>
+    <li><a href="https://home-affairs.ec.europa.eu/policies/schengen/schengen-area_en" target="_blank" rel="noopener noreferrer">Schengen Area (European Commission)</a></li>
+    <li><a href="https://eur-lex.europa.eu/eli/reg/2016/399/oj" target="_blank" rel="noopener noreferrer">Regulation (EU) 2016/399 (90/180-day rule)</a></li>
+    <li><a href="https://ec.europa.eu/assets/home/visa-calculator/calculator.htm?lang=en" target="_blank" rel="noopener noreferrer">Official calculator of the European Commission</a></li>
+    <li><a href="https://travel-europe.europa.eu/en/ees" target="_blank" rel="noopener noreferrer">EU Entry/Exit System (EES)</a></li>
+  </ul>
+
+  <h2>External services used</h2>
+  <p>
+    The app loads images of flags from a public content delivery network
+    (CDN, jsDelivr) and some fonts from Google Fonts. These services may
+    receive standard technical requests (e.g., IP address) necessary for the
+    processing of any web request, in accordance with their respective
+    privacy policies.
+  </p>
+
+  <h2>Data deletion</h2>
+  <p>
+    You can delete all data at any time by uninstalling the app or clearing
+    the site data from your browser settings.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    If you have any questions about this privacy policy, please open an
+    issue in the project's GitHub repository.
+  </p>
+  </section>
+
+  <footer>
+    <span lang="it">Schengen Days Unofficial — app indipendente e gratuita.</span><br />
+    <span lang="en">Schengen Days Unofficial — a free, independent app.</span>
+  </footer>
 </body>
 </html>
