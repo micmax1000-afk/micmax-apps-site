@@ -23,20 +23,20 @@ a{color:#2E4A8F}
 @media(max-width:600px){.sez{grid-template-columns:1fr}.sez img{width:min(240px,70vw);margin:4px auto 0}.tab td:first-child{white-space:normal}}
 </style></head><body>
 <h1>Guida a Turni & Accessorio PS</h1>
-<p class="agg">Come si usa l'app, passo per passo · aggiornata alla versione 2.93</p>
+<p class="agg">Come si usa l'app, passo per passo · aggiornata alla versione 3.4</p>
 <nav><a href="#inizio">Primi passi</a><a href="#calendario">Calendario</a><a href="#giorno">Il giorno e le indennità</a><a href="#sequenza">Turni</a><a href="#report">Report</a><a href="#assenze">Assenze</a><a href="#altro">Altro</a><a href="#promemoria">Promemoria e widget</a><a href="#backup">Backup</a><a href="#domande">Domande</a></nav>
 
 <h2 id="inizio">1. Primi passi</h2>
 <div class="sez"><div>
 <p>Al primo avvio l'app ti accompagna in 5 passi:</p>
 <ol>
-<li><b>Chi sei</b>: qualifica, anni di servizio e regione. Servono per stimare stipendio e tasse.</li>
+<li><b>Chi sei</b>: qualifica, anni di servizio, regione, addizionale comunale (0,8% se non la sai), coniuge e figli over 21 a carico, sindacato con la quota al mese e, se vuoi, il reddito dell'anno scorso. Servono per stimare stipendio e tasse.</li>
 <li><b>Come lavori</b>: scegli la tua turnazione (es. Turno in quinta) e cosa fai oggi. L'app riempie i prossimi 3 mesi.</li>
 <li><b>Quanto ti resta</b>: congedo ordinario diviso per anno, recuperi e riposo compensativo, come risultano all'ufficio.</li>
 <li><b>Come la vuoi</b>: tema chiaro o scuro, promemoria e widget (all'inizio sono spenti).</li>
 <li><b>Tutto pronto</b>: un riepilogo di quello che hai scelto.</li>
 </ol>
-<div class="cons">💡 Coniuge, figli over 21 e sindacato li aggiungi dopo in <b>Altro → Anagrafica</b>, nel riquadro "I tuoi dati".</div>
+<div class="cons">💡 Il <b>reddito dell'anno scorso</b> (dalla CU) è facoltativo e resta solo sul telefono. Se lo scrivi, detrazioni e addizionali vengono come nel cedolino NoiPA. Tutto si cambia poi in <b>Altro → Anagrafica</b>.</div>
 </div><img src="turni/guida/saldi.jpg" alt="Saldi di partenza: congedo per anno" loading="lazy"></div>
 
 <h2 id="calendario">2. Calendario</h2>
@@ -49,9 +49,8 @@ a{color:#2E4A8F}
 <li>I giorni del mese prima e dopo si vedono sbiaditi, per capire come continua la turnazione.</li>
 </ul>
 </div><img src="turni/guida/calendario.jpg" alt="Calendario del mese" loading="lazy"></div>
-<h3>Simboli delle indennità</h3>
-<p>Nelle caselle compaiono piccoli simboli per le indennità del giorno (missione, ordine pubblico, reperibilità…). In <b>Altro → Indennità nel calendario</b> scegli quali mostrare. All'inizio servizio esterno, buono pasto e controllo del territorio sono nascosti, perché ci sono quasi ogni giorno.</p>
-<div class="cons">💡 Nascondere un simbolo cambia solo la vista: l'indennità viene <b>sempre contata</b> nei calcoli.</div>
+<h3>Le caselle</h3>
+<p>Ogni casella mostra il turno (Sera, Pom., Notte…) e, se c'è, l'evento. Le indennità del giorno le vedi toccando il giorno, scritte per esteso nel riquadro sotto il calendario (per esempio "2 buoni pasto"), e nell'agenda.</p>
 <h3>Agenda sotto il calendario</h3>
 <div class="sez"><div>
 <p>In <b>Altro → Agenda sotto il calendario</b> puoi far comparire, sotto il mese, i prossimi 14 giorni in elenco: turno, orario, ore, indennità ed eventi, con il totale delle ore di ogni settimana.</p>
@@ -78,7 +77,7 @@ a{color:#2E4A8F}
 <tr><td>Servizio esterno</td><td>Turni di almeno <b>3 ore</b>. Se nello stesso turno c'è anche l'ordine pubblico, si paga solo l'ordine pubblico.</td></tr>
 <tr><td>Missione</td><td>Sulle ore di missione: niente fino a 4 ore, tariffa piena da 4 a 8 ore, ridotta oltre le 8. Il rimborso dei pasti su ricevuta non è calcolato.</td></tr>
 <tr><td>Reperibilità</td><td>Un importo per ogni giorno segnato.</td></tr>
-<tr><td>Cambio turno</td><td>Un importo per ogni giorno segnato.</td></tr>
+<tr><td>Cambio turno</td><td>Un importo per ogni cambio, pagato a luglio dell'anno dopo insieme alla produttività collettiva. Nel Report vedi quanti ne hai nell'anno e quanto varranno.</td></tr>
 <tr><td>Lavorato sul riposo</td><td>L'indennità e <b>un giorno di Recupero riposo</b> in Assenze.</td></tr>
 <tr><td>Lavorato in festivo</td><td><b>Un giorno di Recupero festivo</b> in Assenze.</td></tr>
 <tr><td>Buono pasto</td><td>Solo quanti, senza importo: nel Report, "fuori busta paga". Se in un giorno sono 2, in "Modifica il giorno" scegli <b>2</b>.</td></tr>
@@ -118,24 +117,33 @@ a{color:#2E4A8F}
 <ul>
 <li>In alto: quanto <b>arriva sul conto</b> nel mese, con stipendio, indennità e tasse. Con ‹ › cambi mese.</li>
 <li><b>Il mese</b>: turni, riposi, ore, straordinario e le indennità con <b>lordo e netto</b>.</li>
-<li><b>Statistiche dell'anno</b> e <b>cedolino</b> stimato con lordo, trattenute e netto.</li>
-<li>Con <b>⚙️</b> in alto scegli quali di queste parti vedere.</li>
+<li>In fondo: <b>buoni pasto</b>, <b>Cedolino stimato</b> e <b>Statistiche dell'anno</b>. Si aprono toccando la loro riga.</li>
+<li>Con <b>Personalizza</b> in alto scegli quali di queste parti vedere.</li>
 </ul>
-<div class="att">⚠️ È una <b>stima</b>. Il netto vero può essere diverso di qualche euro: arretrati, conguagli, addizionali comunali, detrazioni personali. Confronta sempre con il cedolino ufficiale.</div>
+<div class="att">⚠️ È una <b>stima</b>. Il netto vero può essere diverso di qualche euro: arretrati, conguagli, rimborsi del 730. Confronta sempre con il cedolino ufficiale.</div>
 <p class="nota">Lo stipendio arriva il mese dopo quello lavorato; indennità e straordinari due mesi dopo (quelli di settembre a novembre). La tredicesima arriva a dicembre. Il Report lo tiene già in conto.</p>
 </div><img src="turni/guida/report.jpg" alt="Report del mese" loading="lazy"></div>
+<h3>Cedolino stimato</h3>
+<div class="sez"><div>
+<ul>
+<li>In alto il <b>netto</b>, sotto <b>Lordo</b> (stipendio, indennità, straordinario) e <b>Tasse e contributi</b> voce per voce.</li>
+<li><b>Tutte le voci</b> mostra il dettaglio: stipendio tabellare, indennità una per una, IRPEF lorda e detrazioni. L'app si ricorda la tua scelta.</li>
+<li><b>± Conguaglio</b> aggiunge o toglie un importo al netto del mese (per esempio un rimborso 730); <b>PDF</b> lo stampa.</li>
+<li>Detrazioni e addizionali si calcolano come NoiPA, sul reddito dell'anno scorso: le addizionali in 9 rate da marzo a novembre. Le aliquote regionali si aggiornano ogni mese dai file del Ministero.</li>
+</ul>
+</div><img src="turni/guida/cedolino.jpg" alt="Cedolino stimato" loading="lazy"></div>
 
 <h2 id="assenze">6. Assenze</h2>
 <div class="sez"><div>
 <ul>
-<li>In alto: quanti <b>giorni di congedo ordinario</b> ti restano, più permesso breve e recuperi.</li>
-<li>Ogni voce ha la sua scheda con l'<b>anello</b>: pieno quando è tutta da usare, si svuota man mano.</li>
-<li>Tocca una scheda per i dettagli e per cambiare <b>quanto spetta</b>.</li>
+<li>In alto i <b>Giorni di partenza</b>, con <b>Modifica</b>.</li>
+<li>Ogni voce su una riga, con il suo colore: quanto <b>rimane su quanto spetta</b>. L'<b>anello</b> è pieno quando è tutta da usare e si svuota man mano; grigio per le voci a 0. Il congedo ordinario mostra anche i giorni di ogni anno.</li>
+<li>Tocca una voce per i dettagli e per cambiare <b>quanto spetta</b>.</li>
 <li>Per usare un'assenza: nel calendario tocca il giorno → <b>Assenza</b> → scegli quale.</li>
 </ul>
 </div><img src="turni/guida/assenze.jpg" alt="Assenze e permessi" loading="lazy"></div>
 <h3>Saldi di partenza</h3>
-<p>L'app non può sapere quanti giorni avevi prima di usarla. Con <b>Inserisci i saldi di partenza</b> (o <b>Correggi</b>) scrivi:</p>
+<p>L'app non può sapere quanti giorni avevi prima di usarla. Con <b>Inserisci i saldi di partenza</b> (o <b>Modifica</b>) scrivi:</p>
 <ul>
 <li>il <b>congedo ordinario per anno</b> (es. 2026: 37, 2025: 15, 2024: 3): si usano prima i giorni più vecchi e non scadono;</li>
 <li>i <b>recuperi</b> riposo e festivo ancora da fare;</li>
@@ -155,19 +163,28 @@ a{color:#2E4A8F}
 <tr><td>Riposo compensativo</td><td>Ore automatiche: salgono con lo straordinario messo a riposo, scendono quando lo usi indicando l'orario del turno sostituito.</td></tr>
 <tr><td>Aspettativa, maternità/paternità, congedo parentale</td><td>Solo per segnare i giorni sul calendario.</td></tr>
 </table>
-<p>Con <b>＋ Aggiungi assenza personalizzata</b> crei una voce tua: poi nella sua scheda le dai nome e quanto spetta.</p>
+<p>Con <b>Nuova assenza</b> in alto (o <b>＋ Aggiungi un'assenza tua</b> in fondo) crei una voce tua: poi nella sua scheda le dai nome e quanto spetta.</p>
 
 <h2 id="altro">7. Altro</h2>
 <div class="sez"><div>
 <ul>
-<li><b>Anagrafica</b>: qualifica (con il distintivo del grado), anni, regione, famiglia, sindacato.</li>
-<li><b>Tabelle ufficiali</b>: stipendi, indennità e aliquote usati nei calcoli. Si aggiornano da sole dal sito (vedi <a href="tabelle-turni.html">Tabelle economiche</a>); le tue modifiche restano.</li>
-<li><b>Indennità nel calendario</b>: quali simboli vedere.</li>
-<li><b>Tema</b> (Auto, Luce, Chiaro, Grigio, Nero) e <b>colore dell'app</b>.</li>
+<li><b>Anagrafica</b>: qualifica (con il distintivo del grado), anni, regione, addizionale comunale, famiglia, sindacato con la quota al mese; facoltativi il reddito e l'addizionale regionale dell'anno scorso (dalla CU). Se manca qualcosa che serve, il Report te lo dice.</li>
+<li><b>Tabelle ufficiali</b>: stipendi, indennità e aliquote usati nei calcoli. Si aggiornano da sole dal sito (vedi <a href="tabelle-turni.html">Tabelle economiche</a>), le addizionali regionali ogni mese dal Ministero. Con <b>Modifica i valori a mano</b> le cambi tu: il valore cambiato si vede in blu, con ↺ torni a quello ufficiale.</li>
+<li><b>Backup</b>: nella sua pagina, sul telefono e su Google Drive.</li>
+<li><b>Tema e colore</b> (Auto, Luce, Chiaro, Grigio, Nero) dell'app.</li>
 <li><b>Guida all'app</b>: apre questa pagina.</li>
 <li><b>Segnala un problema o un'idea</b>: apre l'email già scritta, con versione e telefono.</li>
 </ul>
 </div><img src="turni/guida/altro.jpg" alt="Impostazioni in Altro" loading="lazy"></div>
+<h3>Anagrafica</h3>
+<div class="sez"><div>
+<p>I dati che servono al netto. In particolare:</p>
+<ul>
+<li><b>Addizionale comunale</b>: parte da 0,8% (il valore più comune); scrivi quella del tuo Comune, la trovi sul cedolino.</li>
+<li><b>Reddito dell'anno scorso</b> e <b>addizionale regionale dell'anno scorso</b>: li trovi sulla CU. Facoltativi: senza, l'app li stima. Da giugno, se il reddito è di due anni prima, l'app ti ricorda di aggiornarlo con la CU nuova.</li>
+<li><b>Iscritto al sindacato</b>: con Sì compare la quota al mese, da correggere con quella del cedolino.</li>
+</ul>
+</div><img src="turni/guida/anagrafica.jpg" alt="Anagrafica" loading="lazy"></div>
 
 <h3 id="promemoria">Promemoria del turno</h3>
 <ol>
@@ -204,9 +221,9 @@ a{color:#2E4A8F}
 
 <h2 id="domande">8. Domande frequenti</h2>
 <details><summary>Ho cambiato telefono: come recupero i dati?</summary><p>Sul telefono vecchio: <b>Altro → Backup → Esporta backup</b> e manda il file sul telefono nuovo (oppure usa il backup su Google Drive). Sul telefono nuovo installa l'app e usa <b>Importa</b> (o <b>Ripristina da Drive</b>).</p></details>
-<details><summary>Perché il netto non è uguale alla mia busta paga?</summary><p>L'app fa una stima con le tabelle ufficiali. Arretrati, conguagli di fine anno, addizionale comunale e detrazioni personali possono cambiare il netto vero di qualche euro.</p></details>
-<details><summary>Non vedo l'indennità di controllo del territorio</summary><p>Controlla che il turno abbia almeno 3 ore tra le 18 e le 22 o tra le 22 e le 6, e che non ci sia anche l'ordine pubblico. Il simbolo in calendario all'inizio è nascosto: si accende in <b>Altro → Indennità nel calendario</b>.</p></details>
-<details><summary>Ho sbagliato i giorni di congedo iniziali</summary><p>In <b>Assenze</b> tocca <b>Correggi</b> accanto a "Saldi di partenza" e scrivi i numeri che ti dà l'ufficio oggi.</p></details>
+<details><summary>Perché il netto non è uguale alla mia busta paga?</summary><p>L'app fa una stima con le tabelle ufficiali. Per avvicinarla al cedolino: in Anagrafica scrivi il <b>reddito</b> e l'<b>addizionale regionale dell'anno scorso</b> (dalla CU), l'<b>addizionale comunale</b> e la <b>quota sindacale</b>. Arretrati, conguagli di fine anno e rimborsi del 730 restano fuori: li puoi aggiungere con <b>± Conguaglio</b> nel cedolino.</p></details>
+<details><summary>Non vedo l'indennità di controllo del territorio</summary><p>Controlla che il turno abbia almeno 3 ore tra le 18 e le 22 o tra le 22 e le 6, e che non ci sia anche l'ordine pubblico. Toccando il giorno la vedi nel riquadro sotto il calendario.</p></details>
+<details><summary>Ho sbagliato i giorni di congedo iniziali</summary><p>In <b>Assenze</b> tocca <b>Modifica</b> accanto a "Giorni di partenza" e scrivi i numeri che ti dà l'ufficio oggi.</p></details>
 <details><summary>Ho cambiato turnazione</summary><p>In <b>Turni → Genera turni automaticamente</b> scegli la nuova sequenza e la data da cui parte: i giorni da quella data vengono riscritti, ferie e assenze restano.</p></details>
 <details><summary>Il promemoria non arriva</summary><p>Controlla che le notifiche dell'app siano permesse e che la batteria dell'app sia "Senza restrizioni" nelle impostazioni di Android.</p><p><b>Su Xiaomi, Redmi e POCO</b> non basta accendere le notifiche dell'app: in Impostazioni → App → Turni & Accessorio PS → Notifiche → <b>Categorie di notifica</b>, apri ogni categoria (Promemoria eventi, Promemoria del turno, Avvisi evento) e accendi <b>Visualizza le notifiche</b>. Se una categoria è spenta l'app te lo dice, e "Attiva notifiche" ti porta direttamente lì.</p></details>
 <details><summary>L'app manda i miei dati da qualche parte?</summary><p>No. Turni, stipendio e assenze restano sul telefono. L'app scarica solo il file pubblico delle tabelle dal sito, una volta a settimana. Il backup su Drive va solo nel tuo account Google. Vedi l'<a href="privacy-turni.html">informativa privacy</a>.</p></details>
