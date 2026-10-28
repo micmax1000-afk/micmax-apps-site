@@ -1,0 +1,132 @@
+{
+ "nota": "Regole delle delibere regionali scritte solo a parole (non nelle colonne del file del Ministero). esenteFino: niente addizionale fino a quel reddito; sottoSoglia: fino a quel reddito un'aliquota sola su tutto; detrazioni: importi da togliere se il reddito è tra 'da' e 'a'. Non sono considerate le detrazioni per figli o disabilità.",
+ "2025": {
+  "Valle d'Aosta": {
+   "esenteFino": 15000
+  },
+  "Friuli Venezia Giulia": {
+   "tipo": "unica",
+   "valore": 1.23,
+   "sottoSoglia": {
+    "fino": 15000,
+    "aliquota": 0.7
+   }
+  },
+  "Lazio": {
+   "sottoSoglia": {
+    "fino": 28000,
+    "aliquota": 1.73
+   },
+   "detrazioni": [
+    {
+     "da": 28000,
+     "a": 35000,
+     "importo": 60
+    }
+   ]
+  },
+  "Umbria": {
+   "sottoSoglia": {
+    "fino": 28000,
+    "aliquota": 1.23
+   },
+   "detrazioni": [
+    {
+     "da": 28000,
+     "a": 50000,
+     "importo": 150
+    }
+   ]
+  },
+  "Provincia di Trento": {
+   "esenteFino": 30000
+  },
+  "Provincia di Bolzano": {
+   "detrazioni": [
+    {
+     "da": 0,
+     "a": 90000,
+     "importo": 430.5
+    }
+   ]
+  }
+ },
+ "2026": {
+  "Valle d'Aosta": {
+   "esenteFino": 15000
+  },
+  "Friuli Venezia Giulia": {
+   "tipo": "unica",
+   "valore": 1.23,
+   "sottoSoglia": {
+    "fino": 15000,
+    "aliquota": 0.7
+   }
+  },
+  "Lazio": {
+   "sottoSoglia": {
+    "fino": 28000,
+    "aliquota": 1.73
+   },
+   "detrazioni": [
+    {
+     "da": 28000,
+     "a": 30000,
+     "importo": 60
+    }
+   ]
+  },
+  "Umbria": {
+   "sottoSoglia": {
+    "fino": 28000,
+    "aliquota": 1.23
+   },
+   "detrazioni": [
+    {
+     "da": 28000,
+     "a": 50000,
+     "importo": 150
+    }
+   ]
+  },
+  "Provincia di Trento": {
+   "esenteFino": 30000
+  },
+  "Provincia di Bolzano": {
+   "detrazioni": [
+    {
+     "da": 0,
+     "a": 90000,
+     "importo": 430.5
+    }
+   ]
+  }
+ },
+ "controllati": [
+  "2025|Campania|2069|be8dc11e6ee3",
+  "2025|Friuli Venezia Giulia|1967|042ea8889324",
+  "2025|Lazio|1887|9f98e971c37d",
+  "2025|Liguria|2087|2dcab63e0e7f",
+  "2025|Marche|2008|84670c1ff712",
+  "2025|Piemonte|2147|4e4e3fbe470e",
+  "2025|Provincia di Bolzano|1907|20a23265216a",
+  "2025|Provincia di Trento|2107|99ed1a523e78",
+  "2025|Puglia|1947|f78c455d28ce",
+  "2025|Sardegna|1948|b6676c632413",
+  "2025|Umbria|2027|86c0102d0449",
+  "2025|Valle d'Aosta|2047|e28ef3332391",
+  "2025|Veneto|2050|c479b39a5077",
+  "2026|Campania|2188|be8dc11e6ee3",
+  "2026|Friuli Venezia Giulia|2169|042ea8889324",
+  "2026|Lazio|2174|82c6b2daa62b",
+  "2026|Marche|2171|84670c1ff712",
+  "2026|Piemonte|2187|5bb31927b08c",
+  "2026|Provincia di Bolzano|2182|a618a94990d0",
+  "2026|Provincia di Trento|2172|99ed1a523e78",
+  "2026|Puglia|2207|d97acf41e5b0",
+  "2026|Sardegna|2184|3220f06483bd",
+  "2026|Umbria|2168|86c0102d0449",
+  "2026|Valle d'Aosta|2167|4a97b422c472",
+  "2026|Veneto|2173|09971b950dab"
+ ]
+}
