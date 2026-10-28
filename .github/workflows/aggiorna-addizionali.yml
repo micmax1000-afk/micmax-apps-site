@@ -1,0 +1,39 @@
+# Una volta al mese scarica dal Ministero dell'economia e delle finanze le addizionali regionali IRPEF
+# e, se sono cambiate, aggiorna turni/tabelle.json direttamente sul sito: l'app Turni & Accessorio PS
+# le scarica da sola.
+# Se una delibera regionale nuova ha un testo da leggere (esenzioni, detrazioni…) apre una segnalazione.
+name: Aggiorna addizionali regionali
+
+on:
+  schedule:
+    - cron: '17 4 3 * *'   # il 3 di ogni mese
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Scarica e converti i file del Ministero
+        run: node .github/scripts/aggiorna-addizionali.mjs | tee resoconto.txt
+      - name: Pubblica se qualcosa è cambiato
+        run: |
+          if git diff --quiet -- turni/; then echo "Nessun cambiamento"; exit 0; fi
+          git config user.name "aggiorna-addizionali"
+          git config user.email "actions@users.noreply.github.com"
+          git add turni/tabelle.json
+          git commit -m "Addizionali regionali aggiornate dal Ministero" -m "$(cat resoconto.txt)"
+          git push
+      - name: Segnala le delibere regionali da leggere
+        if: hashFiles('.github/da-controllare.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "Addizionali regionali: delibere nuove da controllare ($(date +%Y-%m))" --body-file .github/da-controllare.md
