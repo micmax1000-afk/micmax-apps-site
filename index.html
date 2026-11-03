@@ -8,21 +8,25 @@
 
   <meta
     name="description"
-    content="Portfolio dei progetti Android sviluppati da MicMax: Schengen Days, Turni 2.0 e Diario Auto."
+    content="Portfolio dei progetti Android sviluppati da MicMax: Schengen Days, Turni e Diario Auto."
+  />
+  <meta name="theme-color" content="#08111f" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2362a8ff'/%3E%3Cstop offset='1' stop-color='%238b7cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M16 46V18h6l10 14 10-14h6v28h-7V30l-9 12-9-12v16z' fill='white'/%3E%3C/svg%3E"
   />
 
   <style>
     :root {
       --background: #08111f;
-      --background-light: #0d1b2f;
-      --card: rgba(255, 255, 255, 0.08);
-      --card-border: rgba(255, 255, 255, 0.13);
+      --card: rgba(255, 255, 255, 0.07);
+      --card-border: rgba(255, 255, 255, 0.12);
       --text: #f4f7fb;
       --muted: #aebbd0;
       --primary: #62a8ff;
       --secondary: #8b7cff;
       --success: #5ee0b0;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     }
 
     * {
@@ -33,32 +37,19 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 84px;
     }
 
     body {
       min-height: 100vh;
       color: var(--text);
       background:
-        radial-gradient(
-          circle at 10% 0%,
-          rgba(98, 168, 255, 0.2),
-          transparent 30rem
-        ),
-        radial-gradient(
-          circle at 90% 15%,
-          rgba(139, 124, 255, 0.17),
-          transparent 28rem
-        ),
+        radial-gradient(circle at 10% 0%, rgba(98, 168, 255, 0.2), transparent 30rem),
+        radial-gradient(circle at 90% 15%, rgba(139, 124, 255, 0.17), transparent 28rem),
         var(--background);
-      font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     a {
@@ -66,24 +57,33 @@
       text-decoration: none;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
     .container {
       width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
     }
+
+    /* ---------- Header ---------- */
 
     header {
       position: sticky;
       top: 0;
       z-index: 10;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(8, 17, 31, 0.75);
+      background: rgba(8, 17, 31, 0.78);
       backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
     }
 
     .navbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
       min-height: 72px;
     }
 
@@ -107,6 +107,12 @@
       box-shadow: 0 8px 24px rgba(98, 168, 255, 0.25);
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
     nav {
       display: flex;
       gap: 26px;
@@ -121,6 +127,40 @@
     nav a:hover {
       color: white;
     }
+
+    .lang-switch {
+      display: inline-flex;
+      padding: 3px;
+      border: 1px solid var(--card-border);
+      border-radius: 99px;
+      background: var(--card);
+    }
+
+    .lang-switch button {
+      min-width: 40px;
+      padding: 5px 10px;
+      border: 0;
+      border-radius: 99px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .lang-switch button:hover {
+      color: white;
+    }
+
+    .lang-switch button[aria-pressed="true"] {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+    }
+
+    /* ---------- Hero ---------- */
 
     .hero {
       display: grid;
@@ -160,12 +200,7 @@
     }
 
     .gradient-text {
-      background: linear-gradient(
-        110deg,
-        #ffffff 10%,
-        var(--primary),
-        var(--secondary)
-      );
+      background: linear-gradient(110deg, #ffffff 10%, var(--primary), var(--secondary));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -195,10 +230,7 @@
       border: 1px solid transparent;
       border-radius: 12px;
       font-weight: 700;
-      transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
     .button:hover {
@@ -213,8 +245,40 @@
     .button-secondary {
       border-color: var(--card-border);
       background: var(--card);
-      color: var(--text);
     }
+
+    .button svg {
+      width: 18px;
+      height: 18px;
+      flex: none;
+    }
+
+    .hero-icons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 38px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .hero-icons .stack {
+      display: flex;
+    }
+
+    .hero-icons img {
+      width: 40px;
+      height: 40px;
+      border: 2px solid var(--background);
+      border-radius: 11px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-icons img + img {
+      margin-left: -10px;
+    }
+
+    /* Phone mock-up: a home screen with the real app icons */
 
     .phone-wrapper {
       position: relative;
@@ -234,11 +298,11 @@
 
     .phone {
       position: relative;
-      width: 245px;
-      height: 480px;
+      width: 250px;
+      height: 500px;
       padding: 10px;
       border: 8px solid #202e43;
-      border-radius: 36px;
+      border-radius: 38px;
       background: #050b14;
       box-shadow: var(--shadow);
       transform: rotate(5deg);
@@ -249,9 +313,9 @@
       top: 13px;
       left: 50%;
       z-index: 2;
-      width: 82px;
-      height: 22px;
-      border-radius: 20px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
       background: #050b14;
       transform: translateX(-50%);
     }
@@ -259,53 +323,78 @@
     .phone-screen {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       height: 100%;
-      padding: 58px 18px 20px;
-      border-radius: 25px;
+      padding: 44px 18px 18px;
+      border-radius: 26px;
       background:
-        linear-gradient(145deg, rgba(98, 168, 255, 0.25), transparent 40%),
+        radial-gradient(circle at 20% 10%, rgba(98, 168, 255, 0.45), transparent 55%),
+        radial-gradient(circle at 90% 80%, rgba(139, 124, 255, 0.45), transparent 55%),
         linear-gradient(180deg, #122949, #0a1424);
     }
 
-    .screen-label {
-      color: #9ebce4;
-      font-size: 0.75rem;
+    .screen-clock {
+      font-size: 2.6rem;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1;
     }
 
-    .screen-title {
+    .screen-date {
       margin-top: 6px;
-      font-size: 1.45rem;
-      font-weight: 800;
+      color: #c8d8ef;
+      font-size: 0.78rem;
     }
 
-    .screen-card {
-      padding: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.08);
+    .screen-folder {
+      margin-top: auto;
+      padding: 16px 12px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
     }
 
-    .screen-number {
-      font-size: 2.4rem;
-      font-weight: 800;
+    .screen-folder-title {
+      margin-bottom: 12px;
+      color: #dce7f7;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-align: center;
+      text-transform: uppercase;
     }
 
-    .screen-bar {
-      height: 8px;
-      margin-top: 14px;
-      overflow: hidden;
+    .screen-apps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .screen-app {
+      display: grid;
+      justify-items: center;
+      gap: 6px;
+      font-size: 0.66rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .screen-app img {
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+    }
+
+    .screen-dock {
+      width: 80px;
+      height: 4px;
+      margin: 18px auto 0;
       border-radius: 99px;
-      background: rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.55);
     }
 
-    .screen-bar span {
-      display: block;
-      width: 68%;
-      height: 100%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-    }
+    /* ---------- Sections ---------- */
 
     section {
       padding: 90px 0;
@@ -329,58 +418,71 @@
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
     .project-card {
+      --accent: 98, 168, 255;
+      position: relative;
       display: flex;
       flex-direction: column;
-      min-height: 390px;
       padding: 28px;
+      overflow: hidden;
       border: 1px solid var(--card-border);
       border-radius: 24px;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.1),
-          rgba(255, 255, 255, 0.035)
-        );
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
       box-shadow: var(--shadow);
-      transition:
-        transform 0.25s ease,
-        border-color 0.25s ease;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .project-card::before {
+      position: absolute;
+      top: -90px;
+      right: -90px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgb(var(--accent));
+      content: "";
+      filter: blur(70px);
+      opacity: 0.28;
+      pointer-events: none;
     }
 
     .project-card:hover {
-      border-color: rgba(98, 168, 255, 0.55);
+      border-color: rgba(var(--accent), 0.6);
       transform: translateY(-6px);
     }
 
-    .project-icon {
-      display: grid;
-      width: 62px;
-      height: 62px;
-      place-items: center;
-      margin-bottom: 26px;
-      border-radius: 18px;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(98, 168, 255, 0.28),
-          rgba(139, 124, 255, 0.3)
-        );
-      font-size: 30px;
+    .project-card.schengen { --accent: 255, 204, 0; }
+    .project-card.turni { --accent: 58, 158, 235; }
+    .project-card.diario { --accent: 247, 148, 29; }
+
+    .app-icon {
+      width: 76px;
+      height: 76px;
+      margin-bottom: 24px;
+      border-radius: 22px;
+      box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.08);
     }
 
     .project-card h3 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       letter-spacing: -0.04em;
+      line-height: 1.2;
     }
 
-    .project-card p {
+    .project-card > p {
       margin-top: 12px;
       color: var(--muted);
+    }
+
+    .project-note {
+      font-size: 0.85rem;
+      font-style: italic;
     }
 
     .tags {
@@ -391,29 +493,45 @@
     }
 
     .tag {
-      padding: 6px 10px;
+      padding: 5px 10px;
       border: 1px solid var(--card-border);
       border-radius: 99px;
       color: #c8d5e8;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
     }
 
-    .project-footer {
+    .project-links {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-top: auto;
-      padding-top: 30px;
+      padding-top: 26px;
     }
 
-    .github-link {
-      color: var(--primary);
-      font-weight: 700;
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: border-color 0.2s ease, background 0.2s ease;
     }
 
-    .github-link:hover {
-      color: white;
+    .pill:hover {
+      border-color: rgba(var(--accent), 0.7);
+      background: rgba(var(--accent), 0.12);
+    }
+
+    .pill svg {
+      width: 15px;
+      height: 15px;
+      flex: none;
+      opacity: 0.85;
     }
 
     .about {
@@ -445,14 +563,25 @@
     }
 
     .stat {
+      display: flex;
+      align-items: center;
+      gap: 14px;
       padding: 18px;
       border-radius: 16px;
       background: rgba(255, 255, 255, 0.06);
     }
 
+    .stat svg {
+      width: 30px;
+      height: 30px;
+      flex: none;
+      color: var(--primary);
+    }
+
     .stat strong {
       display: block;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
+      line-height: 1.1;
     }
 
     .stat span {
@@ -464,13 +593,7 @@
       padding: 55px;
       border: 1px solid rgba(98, 168, 255, 0.28);
       border-radius: 28px;
-      background:
-        linear-gradient(
-          120deg,
-          rgba(98, 168, 255, 0.14),
-          rgba(139, 124, 255, 0.12)
-        ),
-        var(--card);
+      background: linear-gradient(120deg, rgba(98, 168, 255, 0.14), rgba(139, 124, 255, 0.12)), var(--card);
       text-align: center;
     }
 
@@ -488,6 +611,7 @@
     .email-address {
       margin-top: 18px !important;
       font-size: 0.95rem;
+      overflow-wrap: anywhere;
     }
 
     .email-address a,
@@ -495,14 +619,46 @@
       color: var(--primary);
     }
 
+    .policy-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 14px 0 30px;
+    }
+
+    .policy-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .policy-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+    }
+
+    .policy-item div {
+      display: grid;
+      line-height: 1.35;
+    }
+
+    .policy-item strong {
+      font-size: 0.95rem;
+    }
+
+    .policy-item span {
+      font-size: 0.85rem;
+    }
+
     .privacy-box h3 {
       margin-top: 28px;
       margin-bottom: 8px;
       font-size: 1.15rem;
-    }
-
-    .privacy-box h3:first-child {
-      margin-top: 0;
     }
 
     .privacy-box p {
@@ -537,6 +693,16 @@
       color: white;
     }
 
+    @media (max-width: 960px) {
+      .projects {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 800px) {
       nav {
         display: none;
@@ -549,11 +715,8 @@
       }
 
       .hero {
-        padding: 70px 0;
-      }
-
-      .phone-wrapper {
-        order: -1;
+        min-height: 0;
+        padding: 60px 0;
       }
 
       .projects {
@@ -567,16 +730,25 @@
 
     @media (max-width: 480px) {
       .container {
-        width: min(100% - 28px, 1120px);
+        width: calc(100% - 32px);
       }
 
       h1 {
-        font-size: 3.2rem;
+        font-size: 3rem;
       }
 
       .phone {
-        width: 215px;
-        height: 420px;
+        width: 225px;
+        height: 450px;
+      }
+
+      .screen-app img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
       }
 
       .footer-content {
@@ -584,41 +756,72 @@
       }
 
       .privacy-box,
-      .about-box {
+      .about-box,
+      .project-card {
         padding: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
       }
     }
   </style>
 </head>
 
 <body>
+  <!-- Small inline icon set (stroke icons) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15ZM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></symbol>
+    <symbol id="i-table" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm18 2-10 7L2 6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm5 16h.01"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></symbol>
+  </svg>
+
   <header>
     <div class="container navbar">
-      <a class="brand" href="#home" aria-label="Torna all'inizio">
+      <a class="brand" href="#home" aria-label="Torna all'inizio" data-i18n-aria="backToTop">
         <span class="brand-icon">M</span>
         <span>MicMax Apps</span>
       </a>
 
-      <nav aria-label="Navigazione principale">
-        <a href="#progetti">Progetti</a>
-        <a href="#chi-sono">Chi sono</a>
-        <a href="#contatti">Contatti</a>
-        <a href="#privacy">Privacy</a>
-      </nav>
+      <div class="nav-right">
+        <nav aria-label="Navigazione principale">
+          <a href="#progetti" data-i18n="navProjects">Progetti</a>
+          <a href="#chi-sono" data-i18n="navAbout">Chi sono</a>
+          <a href="#contatti" data-i18n="navContact">Contatti</a>
+          <a href="#privacy">Privacy</a>
+        </nav>
+
+        <div class="lang-switch" role="group" aria-label="Lingua / Language">
+          <button type="button" data-lang="it" aria-pressed="true" lang="it" title="Italiano">IT</button>
+          <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main id="home">
     <section class="container hero">
       <div>
-        <div class="eyebrow">Sviluppo Android</div>
+        <div class="eyebrow" data-i18n="eyebrowHero">Sviluppo Android</div>
 
         <h1>
-          App semplici per
-          <span class="gradient-text">problemi reali.</span>
+          <span data-i18n="heroTitle">App semplici per</span>
+          <span class="gradient-text" data-i18n="heroTitleAccent">problemi reali.</span>
         </h1>
 
-        <p class="hero-description">
+        <p class="hero-description" data-i18n="heroDescription">
           Una raccolta dei miei progetti Android, strumenti pensati per
           rendere più semplici la gestione dei soggiorni nell'area Schengen,
           l'organizzazione dei turni di lavoro e la manutenzione dell'auto.
@@ -626,7 +829,8 @@
 
         <div class="actions">
           <a class="button button-primary" href="#progetti">
-            Scopri i progetti →
+            <span data-i18n="heroCta">Scopri i progetti</span>
+            <svg aria-hidden="true"><use href="#i-arrow" /></svg>
           </a>
 
           <a
@@ -635,31 +839,51 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Profilo GitHub
+            <svg aria-hidden="true"><use href="#i-github" /></svg>
+            <span data-i18n="heroGithub">Profilo GitHub</span>
           </a>
+        </div>
+
+        <div class="hero-icons">
+          <div class="stack">
+            <img src="img/schengen.png" alt="" width="40" height="40" />
+            <img src="img/turni.png" alt="" width="40" height="40" />
+            <img src="img/diario-auto.png" alt="" width="40" height="40" />
+          </div>
+          <span>Schengen Days · Turni · Diario Auto</span>
         </div>
       </div>
 
-      <div class="phone-wrapper" aria-label="Anteprima di un'app Android">
+      <div class="phone-wrapper" aria-hidden="true">
         <div class="phone-glow"></div>
 
         <div class="phone">
           <div class="phone-camera"></div>
 
           <div class="phone-screen">
-            <div>
-              <div class="screen-label">APP ANDROID</div>
-              <div class="screen-title">I miei progetti</div>
-            </div>
+            <div class="screen-clock" id="screen-clock">09:41</div>
+            <div class="screen-date" id="screen-date"></div>
 
-            <div class="screen-card">
-              <div class="screen-label">I MIEI PROGETTI</div>
-              <div class="screen-number">03</div>
+            <div class="screen-folder">
+              <div class="screen-folder-title" data-i18n="phoneFolder">Le mie app</div>
 
-              <div class="screen-bar">
-                <span></span>
+              <div class="screen-apps">
+                <div class="screen-app">
+                  <img src="img/schengen.png" alt="" width="52" height="52" />
+                  Schengen
+                </div>
+                <div class="screen-app">
+                  <img src="img/turni.png" alt="" width="52" height="52" />
+                  Turni
+                </div>
+                <div class="screen-app">
+                  <img src="img/diario-auto.png" alt="" width="52" height="52" />
+                  Diario Auto
+                </div>
               </div>
             </div>
+
+            <div class="screen-dock"></div>
           </div>
         </div>
       </div>
@@ -670,55 +894,49 @@
         <div class="section-heading">
           <div class="eyebrow">Portfolio</div>
 
-          <h2>Progetti in evidenza</h2>
+          <h2 data-i18n="projectsTitle">Progetti in evidenza</h2>
 
-          <p>
-            Esplora il codice sorgente e scopri come sono state realizzate
-            queste applicazioni.
+          <p data-i18n="projectsIntro">
+            Tre app nate da esigenze concrete: dati sul telefono, niente
+            account obbligatori, interfacce chiare.
           </p>
         </div>
 
         <div class="projects">
-          <article class="project-card">
-            <div class="project-icon">🌍</div>
+          <article class="project-card schengen">
+            <img class="app-icon" src="img/schengen.png" alt="Icona di Schengen Days" data-i18n-alt="altSchengen" width="76" height="76" />
 
             <h3>Schengen Days</h3>
 
-            <p>
+            <p data-i18n="schengenDesc">
               Un'app Android per aiutare a monitorare i giorni di permanenza
               nell'area Schengen secondo la regola dei 90 giorni su 180.
             </p>
 
             <div class="tags">
               <span class="tag">Android</span>
-              <span class="tag">Date tracking</span>
+              <span class="tag" data-i18n="tagDates">Calcolo date</span>
               <span class="tag">Open source</span>
             </div>
 
-            <div class="project-footer">
-              <span>Progetto Android</span>
-
-              <a
-                class="github-link"
-                href="https://github.com/micmax1000-afk/schengen-days"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Vedi su GitHub ↗
+            <div class="project-links">
+              <a class="pill" href="https://github.com/micmax1000-afk/schengen-days" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#i-github" /></svg>
+                GitHub
+              </a>
+              <a class="pill" href="privacy-schengen.html" data-en-hash="#en">
+                <svg aria-hidden="true"><use href="#i-shield" /></svg>
+                Privacy
               </a>
             </div>
-
-            <p style="margin-top:14px">
-              <a class="github-link" href="privacy-schengen.html">Privacy policy →</a>
-            </p>
           </article>
 
-          <article class="project-card">
-            <div class="project-icon">📅</div>
+          <article class="project-card turni">
+            <img class="app-icon" src="img/turni.png" alt="Icona di Turni &amp; Accessorio PS" data-i18n-alt="altTurni" width="76" height="76" />
 
             <h3>Turni &amp; Accessorio PS</h3>
 
-            <p>
+            <p data-i18n="turniDesc">
               Turni a colori, indennità e cedolino simulato per il personale
               della Polizia di Stato. Agenda, detta a voce, scadenze, note di
               servizio, cambi con i colleghi e gestione veicolo. Link utili con
@@ -727,36 +945,36 @@
               telefono.
             </p>
 
+            <p class="project-note" data-i18n="turniNote" hidden></p>
+
             <div class="tags">
               <span class="tag">Android</span>
-              <span class="tag">Planning</span>
+              <span class="tag" data-i18n="tagPlanning">Pianificazione</span>
               <span class="tag">Google Play</span>
             </div>
 
-            <div class="project-footer">
-              <span>Progetto Android</span>
-
-              <span>
-                <a class="github-link" href="guida-turni.html">Guida →</a>
-                &nbsp;
-                <a class="github-link" href="tabelle-turni.html">Tabelle →</a>
-                &nbsp;
-                <a
-                  class="github-link"
-                  href="privacy-turni.html"
-                >
-                  Privacy policy →
-                </a>
-              </span>
+            <div class="project-links">
+              <a class="pill" href="guida-turni.html">
+                <svg aria-hidden="true"><use href="#i-book" /></svg>
+                <span data-i18n="linkGuide">Guida</span>
+              </a>
+              <a class="pill" href="tabelle-turni.html">
+                <svg aria-hidden="true"><use href="#i-table" /></svg>
+                <span data-i18n="linkTables">Tabelle</span>
+              </a>
+              <a class="pill" href="privacy-turni.html">
+                <svg aria-hidden="true"><use href="#i-shield" /></svg>
+                Privacy
+              </a>
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-icon">🚗</div>
+          <article class="project-card diario">
+            <img class="app-icon" src="img/diario-auto.png" alt="Icona di Diario Auto" data-i18n-alt="altDiario" width="76" height="76" />
 
             <h3>Diario Auto</h3>
 
-            <p>
+            <p data-i18n="diarioDesc">
               Un'app per tenere sotto controllo manutenzioni, rifornimenti,
               spese e scadenze dei tuoi veicoli, con diagnostica OBD2 via
               Bluetooth e backup su Google Drive.
@@ -764,24 +982,18 @@
 
             <div class="tags">
               <span class="tag">Android</span>
-              <span class="tag">Manutenzione</span>
+              <span class="tag" data-i18n="tagMaintenance">Manutenzione</span>
               <span class="tag">OBD2</span>
             </div>
 
-            <div class="project-footer">
-              <span>Progetto Android</span>
-
-              <a
-                class="github-link"
-                href="privacy-diario-auto.html"
-              >
-                Privacy policy →
+            <div class="project-links">
+              <a class="pill" href="privacy-diario-auto.html" data-en-hash="#en">
+                <svg aria-hidden="true"><use href="#i-shield" /></svg>
+                Privacy
               </a>
-              <a
-                class="github-link"
-                href="termini-diario-auto.html"
-              >
-                Termini d'uso →
+              <a class="pill" href="termini-diario-auto.html" data-en-hash="#en">
+                <svg aria-hidden="true"><use href="#i-doc" /></svg>
+                <span data-i18n="linkTerms">Termini d'uso</span>
               </a>
             </div>
           </article>
@@ -792,13 +1004,13 @@
     <section id="chi-sono">
       <div class="container about">
         <div class="section-heading">
-          <div class="eyebrow">Il mio approccio</div>
+          <div class="eyebrow" data-i18n="eyebrowAbout">Il mio approccio</div>
 
-          <h2>Codice utile, interfacce chiare.</h2>
+          <h2 data-i18n="aboutTitle">Codice utile, interfacce chiare.</h2>
         </div>
 
         <div class="about-box">
-          <p>
+          <p data-i18n="aboutText">
             Sviluppo applicazioni Android concentrandomi su funzionalità
             concrete, semplicità d'uso e strumenti utili nella vita
             quotidiana.
@@ -806,13 +1018,19 @@
 
           <div class="stats">
             <div class="stat">
-              <strong>03</strong>
-              <span>Progetti presentati</span>
+              <svg aria-hidden="true"><use href="#i-grid" /></svg>
+              <div>
+                <strong>3</strong>
+                <span data-i18n="statApps">App pubblicate</span>
+              </div>
             </div>
 
             <div class="stat">
-              <strong>Git</strong>
-              <span>Codice disponibile online</span>
+              <svg aria-hidden="true"><use href="#i-phone" /></svg>
+              <div>
+                <strong>100%</strong>
+                <span data-i18n="statLocal">Dati sul tuo telefono</span>
+              </div>
             </div>
           </div>
         </div>
@@ -822,24 +1040,20 @@
     <section id="contatti">
       <div class="container">
         <div class="contact">
-          <h2>Hai una domanda?</h2>
+          <h2 data-i18n="contactTitle">Hai una domanda?</h2>
 
-          <p>
+          <p data-i18n="contactText">
             Per informazioni, suggerimenti o segnalazioni riguardanti le app,
             puoi contattarmi direttamente via email.
           </p>
 
-          <a
-            class="button button-primary"
-            href="mailto:mic.max.1000@gmail.com"
-          >
-            Scrivimi una email →
+          <a class="button button-primary" href="mailto:mic.max.1000@gmail.com">
+            <svg aria-hidden="true"><use href="#i-mail" /></svg>
+            <span data-i18n="contactCta">Scrivimi una email</span>
           </a>
 
           <p class="email-address">
-            <a href="mailto:mic.max.1000@gmail.com">
-              mic.max.1000@gmail.com
-            </a>
+            <a href="mailto:mic.max.1000@gmail.com">mic.max.1000@gmail.com</a>
           </p>
         </div>
       </div>
@@ -848,119 +1062,124 @@
     <section id="privacy">
       <div class="container">
         <div class="section-heading">
-          <div class="eyebrow">Informazioni legali</div>
+          <div class="eyebrow" data-i18n="eyebrowLegal">Informazioni legali</div>
 
-          <h2>Privacy delle app</h2>
+          <h2 data-i18n="privacyTitle">Privacy delle app</h2>
 
-          <p>
+          <p data-i18n="privacyIntro">
             Informazioni sul trattamento dei dati personali nelle applicazioni
-            Schengen Days, Turni 2.0 e Diario Auto.
+            Schengen Days, Turni e Diario Auto.
           </p>
         </div>
 
         <div class="privacy-box">
-          <p>
-            Privacy policy complete e dettagliate delle singole app:
-          </p>
-          <p>
-            • <a href="privacy-turni.html">Turni &amp; Accessorio PS</a><br />
-            • <a href="privacy-schengen.html">Schengen Days Calculator</a><br />
-            • <a href="privacy-diario-auto.html">Diario Auto</a> ·
-            <a href="termini-diario-auto.html">termini d'uso</a>
-          </p>
+          <p data-i18n="privacyLead">Privacy policy complete e dettagliate delle singole app:</p>
 
-          <h3>1. Titolare del trattamento</h3>
+          <div class="policy-list">
+            <div class="policy-item">
+              <img src="img/turni.png" alt="" width="40" height="40" />
+              <div>
+                <strong>Turni &amp; Accessorio PS</strong>
+                <span><a href="privacy-turni.html">Privacy policy</a></span>
+              </div>
+            </div>
+            <div class="policy-item">
+              <img src="img/schengen.png" alt="" width="40" height="40" />
+              <div>
+                <strong>Schengen Days</strong>
+                <span><a href="privacy-schengen.html" data-en-hash="#en">Privacy policy</a></span>
+              </div>
+            </div>
+            <div class="policy-item">
+              <img src="img/diario-auto.png" alt="" width="40" height="40" />
+              <div>
+                <strong>Diario Auto</strong>
+                <span>
+                  <a href="privacy-diario-auto.html" data-en-hash="#en">Privacy policy</a> ·
+                  <a href="termini-diario-auto.html" data-en-hash="#en" data-i18n="linkTermsLower">termini d'uso</a>
+                </span>
+              </div>
+            </div>
+          </div>
 
-          <p>
+          <h3><span>1.</span> <span data-i18n="p1t">Titolare del trattamento</span></h3>
+          <p data-i18n="p1a">
             Il titolare del trattamento dei dati è il proprietario e
             sviluppatore delle applicazioni.
           </p>
-
-          <p>
+          <p data-i18n="p1b">
             Per qualsiasi domanda relativa alla privacy è possibile contattare:
           </p>
-
           <p>
             <strong>Email:</strong>
-            <a href="mailto:mic.max.1000@gmail.com">
-              mic.max.1000@gmail.com
-            </a>
+            <a href="mailto:mic.max.1000@gmail.com">mic.max.1000@gmail.com</a>
           </p>
 
-          <h3>2. Dati trattati</h3>
-
-          <p>
+          <h3><span>2.</span> <span data-i18n="p2t">Dati trattati</span></h3>
+          <p data-i18n="p2a">
             Le applicazioni sono progettate per funzionare senza richiedere
             necessariamente la registrazione di un account o l'inserimento di
             dati identificativi personali.
           </p>
-
-          <p>
+          <p data-i18n="p2b">
             I dati inseriti dall'utente, come date, turni o altre informazioni
             utilizzate dalle app, possono essere conservati localmente sul
             dispositivo dell'utente, esclusivamente per permettere il
             funzionamento delle applicazioni.
           </p>
 
-          <h3>3. Comunicazione dei dati</h3>
-
-          <p>
+          <h3><span>3.</span> <span data-i18n="p3t">Comunicazione dei dati</span></h3>
+          <p data-i18n="p3a">
             I dati inseriti nelle app non vengono venduti, ceduti o comunicati
             a terzi, salvo quando ciò sia necessario per il funzionamento di
             eventuali servizi esterni utilizzati dall'applicazione o quando
             previsto dalla legge.
           </p>
 
-          <h3>4. Dati tecnici</h3>
-
-          <p>
+          <h3><span>4.</span> <span data-i18n="p4t">Dati tecnici</span></h3>
+          <p data-i18n="p4a">
             Il dispositivo potrebbe generare informazioni tecniche necessarie
             al funzionamento del sistema operativo o dei servizi Google Play.
             Tali informazioni sono gestite secondo le politiche dei rispettivi
             fornitori.
           </p>
 
-          <h3>5. Permessi dell'applicazione</h3>
-
-          <p>
+          <h3><span>5.</span> <span data-i18n="p5t">Permessi dell'applicazione</span></h3>
+          <p data-i18n="p5a">
             Le app possono richiedere esclusivamente i permessi necessari alle
             funzionalità disponibili. L'utente può gestire o revocare i
             permessi dalle impostazioni del proprio dispositivo Android.
           </p>
 
-          <h3>6. Conservazione dei dati</h3>
-
-          <p>
+          <h3><span>6.</span> <span data-i18n="p6t">Conservazione dei dati</span></h3>
+          <p data-i18n="p6a">
             I dati salvati localmente rimangono sul dispositivo fino alla loro
             eliminazione da parte dell'utente, alla disinstallazione
             dell'applicazione o alla cancellazione dei dati dell'app dalle
             impostazioni Android.
           </p>
 
-          <h3>7. Sicurezza</h3>
-
-          <p>
+          <h3><span>7.</span> <span data-i18n="p7t">Sicurezza</span></h3>
+          <p data-i18n="p7a">
             Vengono adottate misure ragionevoli per proteggere le informazioni
             gestite dalle applicazioni. Nessun sistema informatico può tuttavia
             garantire una sicurezza assoluta.
           </p>
 
-          <h3>8. Minori</h3>
-
-          <p>
+          <h3><span>8.</span> <span data-i18n="p8t">Minori</span></h3>
+          <p data-i18n="p8a">
             Le applicazioni non sono rivolte consapevolmente alla raccolta di
             dati personali di minori.
           </p>
 
-          <h3>9. Modifiche alla privacy policy</h3>
-
-          <p>
+          <h3><span>9.</span> <span data-i18n="p9t">Modifiche alla privacy policy</span></h3>
+          <p data-i18n="p9a">
             Questa informativa può essere aggiornata in caso di modifiche alle
             applicazioni o alle modalità di trattamento dei dati. La versione
             aggiornata sarà pubblicata su questa pagina.
           </p>
 
-          <p class="privacy-date">
+          <p class="privacy-date" data-i18n="privacyDate">
             Ultimo aggiornamento: 8 ottobre 2026
           </p>
         </div>
@@ -975,9 +1194,175 @@
       <span>
         <a href="#privacy">Privacy Policy</a>
         ·
-        <a href="mailto:mic.max.1000@gmail.com">Contatti</a>
+        <a href="mailto:mic.max.1000@gmail.com" data-i18n="navContact">Contatti</a>
       </span>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      // English texts. The Italian ones are the page's own content.
+      var EN = {
+        pageTitle: "MicMax Apps | Android Projects",
+        pageDescription: "Portfolio of Android projects developed by MicMax: Schengen Days, Turni and Diario Auto.",
+        backToTop: "Back to top",
+        navProjects: "Projects",
+        navAbout: "About me",
+        navContact: "Contact",
+        eyebrowHero: "Android development",
+        heroTitle: "Simple apps for",
+        heroTitleAccent: "real problems.",
+        heroDescription: "A collection of my Android projects – tools designed to make it easier to manage stays in the Schengen area, organise work shifts and maintain your car.",
+        heroCta: "Discover the projects",
+        heroGithub: "GitHub profile",
+        phoneFolder: "My apps",
+        projectsTitle: "Featured projects",
+        projectsIntro: "Three apps born out of real-world needs: data stored on your phone, no compulsory accounts, and clear interfaces.",
+        altSchengen: "Schengen Days icon",
+        altTurni: "Turni & Accessorio PS icon",
+        altDiario: "Diario Auto icon",
+        schengenDesc: "An Android app to help you keep track of the number of days you have spent in the Schengen Area under the 90-day-in-180-day rule.",
+        turniDesc: "Colour-coded shifts, allowances and a simulated payslip for State Police staff. Calendar, voice dictation, deadlines, service notes, shift swaps with colleagues and vehicle management. Useful links to legislation and the ability to search laws on Normattiva. Reminders, widgets and export to Google Calendar. Data is stored on your phone.",
+        turniNote: "App for Italian State Police staff: the guide and tables are available in Italian only.",
+        diarioDesc: "An app to keep track of your vehicles’ servicing, refuelling, expenses and due dates, with OBD2 diagnostics via Bluetooth and backups to Google Drive.",
+        tagDates: "Date calculation",
+        tagPlanning: "Planning",
+        tagMaintenance: "Maintenance",
+        linkGuide: "Guide",
+        linkTables: "Tables",
+        linkTerms: "Terms of use",
+        linkTermsLower: "terms of use",
+        eyebrowAbout: "My approach",
+        aboutTitle: "Useful code, clear interfaces.",
+        aboutText: "I develop Android apps, focusing on practical features, ease of use and tools that are useful in everyday life.",
+        statApps: "Published apps",
+        statLocal: "Data on your phone",
+        contactTitle: "Do you have a question?",
+        contactText: "For any enquiries, suggestions or feedback regarding the apps, please feel free to contact me directly by email.",
+        contactCta: "Send me an email",
+        eyebrowLegal: "Legal information",
+        privacyTitle: "App privacy",
+        privacyIntro: "Information on the processing of personal data in the Schengen Days, Turni and Diario Auto apps.",
+        privacyLead: "Full and detailed privacy policies for each individual app:",
+        p1t: "Data controller",
+        p1a: "The data controller is the owner and developer of the applications.",
+        p1b: "If you have any questions regarding privacy, please contact:",
+        p2t: "Data processed",
+        p2a: "The applications are designed to work without necessarily requiring users to register an account or enter personal identification details.",
+        p2b: "Data entered by the user, such as dates, shifts or other information used by the apps, may be stored locally on the user’s device, solely to enable the apps to function.",
+        p3t: "Data disclosure",
+        p3a: "Data entered into the apps is not sold, transferred or disclosed to third parties, except where this is necessary for the operation of any external services used by the app or where required by law.",
+        p4t: "Technical data",
+        p4a: "The device may generate technical information required for the operation of the operating system or Google Play services. This information is handled in accordance with the policies of the respective providers.",
+        p5t: "App permissions",
+        p5a: "Apps may only request the permissions required for their available features. Users can manage or revoke permissions via the settings on their Android device.",
+        p6t: "Data retention",
+        p6a: "Locally stored data remains on the device until it is deleted by the user, the app is uninstalled, or the app’s data is cleared via the Android settings.",
+        p7t: "Security",
+        p7a: "Reasonable measures are taken to protect the information processed by the applications. However, no IT system can guarantee absolute security.",
+        p8t: "Minors",
+        p8a: "The applications are not intentionally designed to collect personal data from children.",
+        p9t: "Changes to the privacy policy",
+        p9a: "This privacy notice may be updated in the event of changes to the applications or to the way in which data is processed. The updated version will be published on this page.",
+        privacyDate: "Last updated: 8 October 2026"
+      };
+
+      var IT = {
+        pageTitle: document.title,
+        pageDescription: document.querySelector('meta[name="description"]').content
+      };
+
+      var textNodes = document.querySelectorAll("[data-i18n]");
+      var altNodes = document.querySelectorAll("[data-i18n-alt]");
+      var ariaNodes = document.querySelectorAll("[data-i18n-aria]");
+      var hashLinks = document.querySelectorAll("[data-en-hash]");
+
+      textNodes.forEach(function (el) {
+        IT[el.dataset.i18n] = el.textContent.replace(/\s+/g, " ").trim();
+      });
+      altNodes.forEach(function (el) {
+        IT[el.dataset.i18nAlt] = el.alt;
+      });
+      ariaNodes.forEach(function (el) {
+        IT[el.dataset.i18nAria] = el.getAttribute("aria-label");
+      });
+      hashLinks.forEach(function (el) {
+        el.dataset.baseHref = el.getAttribute("href");
+      });
+
+      function pick(dict, key) {
+        return dict[key] != null ? dict[key] : IT[key];
+      }
+
+      function updateDate(lang) {
+        var dateEl = document.getElementById("screen-date");
+        var clockEl = document.getElementById("screen-clock");
+        var now = new Date();
+        var locale = lang === "en" ? "en-GB" : "it-IT";
+        try {
+          dateEl.textContent = now.toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "long" });
+          clockEl.textContent = now.toLocaleTimeString(locale, { hour: "2-digit", minute: "2-digit" });
+        } catch (e) {}
+      }
+
+      function apply(lang) {
+        var dict = lang === "en" ? EN : IT;
+
+        document.documentElement.lang = lang;
+        document.title = pick(dict, "pageTitle");
+        document.querySelector('meta[name="description"]').content = pick(dict, "pageDescription");
+
+        textNodes.forEach(function (el) {
+          var value = pick(dict, el.dataset.i18n);
+          if (value == null) return;
+          el.textContent = value;
+        });
+        altNodes.forEach(function (el) {
+          el.alt = pick(dict, el.dataset.i18nAlt);
+        });
+        ariaNodes.forEach(function (el) {
+          el.setAttribute("aria-label", pick(dict, el.dataset.i18nAria));
+        });
+        hashLinks.forEach(function (el) {
+          el.setAttribute("href", el.dataset.baseHref + (lang === "en" ? el.dataset.enHash : ""));
+        });
+
+        // Notes that exist only in English (e.g. "Italian only")
+        document.querySelectorAll(".project-note").forEach(function (el) {
+          el.hidden = lang !== "en";
+        });
+
+        document.querySelectorAll(".lang-switch button").forEach(function (b) {
+          b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+        });
+
+        updateDate(lang);
+      }
+
+      function initialLang() {
+        var fromUrl = new URLSearchParams(location.search).get("lang");
+        if (fromUrl === "it" || fromUrl === "en") return fromUrl;
+        try {
+          var saved = localStorage.getItem("lang");
+          if (saved === "it" || saved === "en") return saved;
+        } catch (e) {}
+        var nav = (navigator.language || "it").toLowerCase();
+        return nav.indexOf("it") === 0 ? "it" : "en";
+      }
+
+      document.querySelectorAll(".lang-switch button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var lang = b.dataset.lang;
+          try { localStorage.setItem("lang", lang); } catch (e) {}
+          var url = new URL(location.href);
+          url.searchParams.set("lang", lang);
+          history.replaceState(null, "", url);
+          apply(lang);
+        });
+      });
+
+      apply(initialLang());
+    })();
+  </script>
 </body>
 </html>
