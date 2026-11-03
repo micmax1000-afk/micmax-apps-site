@@ -27,7 +27,7 @@
 
 <article id="it" lang="it">
 <h1>Informativa sulla privacy — Diario Auto</h1>
-<p><strong>Ultimo aggiornamento</strong>: 16 ottobre 2026</p>
+<p><strong>Ultimo aggiornamento</strong>: 3 novembre 2026</p>
 <h2>Il principio di fondo</h2>
 <p>Diario Auto è un'app <strong>locale</strong>: tutti i dati che inserisci (veicoli, rifornimenti, manutenzioni, spese, scadenze, sessioni diagnostiche) restano <strong>sul tuo dispositivo</strong>, nella memoria interna riservata all'app. Non esiste un account dello sviluppatore e non esiste un server dello sviluppatore che riceve o conserva i tuoi dati.</p>
 <h2>Dati che NON raccogliamo</h2>
@@ -45,22 +45,27 @@
 </ul>
 <p>Puoi cancellare tutto in qualsiasi momento cancellando i dati dell'app dalle impostazioni del tuo dispositivo, oppure disinstallando l'app.</p>
 <h2>Backup</h2>
-<p>L'app include un backup manuale: il file che generi lo salvi dove vuoi e resta sotto il tuo controllo, non viene inviato a noi. Con Diario Auto Pro puoi anche salvare una copia sul tuo Google Drive (vedi sotto).</p>
-<p><strong>Backup automatico settimanale (solo Pro)</strong>: dopo che hai fatto almeno un backup manuale su Google Drive, l'app carica da sola una nuova copia sul tuo Drive circa una volta a settimana, quando la apri e sei connesso. Usa lo stesso accesso Google che hai già autorizzato, senza chiederti nulla. Aggiunge un file su Drive e non modifica mai i dati sul telefono. Se i dati sul telefono risultano molto meno dell'ultimo backup (per esempio dopo una cancellazione accidentale), il backup automatico si ferma per non sostituire i backup buoni. Puoi disattivarlo in qualsiasi momento dalla sezione Backup dell'app.</p>
+<p>L'app include un backup manuale: il file che generi lo salvi dove vuoi e resta sotto il tuo controllo, non viene inviato a noi. Puoi anche salvare una copia sul tuo Google Drive (vedi sotto).</p>
+<p><strong>Backup automatico settimanale</strong>: dopo che hai fatto almeno un backup manuale su Google Drive, l'app carica da sola una nuova copia sul tuo Drive circa una volta a settimana, quando la apri e sei connesso. Usa lo stesso accesso Google che hai già autorizzato, senza chiederti nulla. Aggiunge un file su Drive e non modifica mai i dati sul telefono. Se i dati sul telefono risultano molto meno dell'ultimo backup (per esempio dopo una cancellazione accidentale), il backup automatico si ferma per non sostituire i backup buoni. Puoi disattivarlo in qualsiasi momento dalla sezione Backup dell'app.</p>
 <h2>Servizi esterni contattati durante l'uso</h2>
 <p>Alcune funzionalità dell'app contattano servizi di terze parti. Questi servizi ricevono solo le informazioni strettamente necessarie alla funzione richiesta, non il resto dei tuoi dati:</p>
 <table>
 <tr><th>Funzione</th><th>Servizio contattato</th><th>Cosa viene inviato</th></tr>
 <tr><td>Ricerca indirizzi (tragitto casa-lavoro)</td><td>Nominatim (nominatim.openstreetmap.org)</td><td>Testo dell'indirizzo cercato</td></tr>
 <tr><td>Calcolo percorso tragitto casa-lavoro</td><td>OSRM (router.project-osrm.org)</td><td>Coordinate di partenza e destinazione</td></tr>
+<tr><td>Distributori vicini (prezzi dei carburanti, solo in Italia)</td><td>Ministero delle Imprese e del Made in Italy — MIMIT (www.mimit.gov.it)</td><td>Nessun dato personale: l'app scarica l'elenco pubblico dei distributori e dei prezzi (dati aperti, licenza IODL 2.0). La tua posizione <strong>non viene inviata</strong>: la ricerca dei distributori vicini avviene sul telefono.</td></tr>
+<tr><td>Ricerca del comune per i distributori (se non usi il GPS)</td><td>Nominatim (nominatim.openstreetmap.org)</td><td>Testo del comune cercato</td></tr>
+<tr><td>Mappa dei distributori</td><td>OpenFreeMap (tiles.openfreemap.org), dati OpenStreetMap</td><td>Le richieste delle porzioni di mappa della zona che stai guardando, come per qualsiasi mappa online</td></tr>
+<tr><td>Rifornimento a voce (solo con l'app in italiano)</td><td>Servizio di riconoscimento vocale di Android (di solito Google)</td><td>La tua voce, solo mentre il microfono è attivo: il servizio vocale del telefono la trasforma in testo e può elaborarla sui server di Google secondo la <a href="https://policies.google.com/privacy">Privacy Policy di Google</a>. Diario Auto riceve solo il testo, non registra e non salva l'audio.</td></tr>
 <tr><td>Backup su Google Drive, manuale o automatico (funzione opzionale, da attivare tu)</td><td>Google (accesso Google + Google Drive API)</td><td>Il tuo indirizzo email Google, usato solo per identificare l'accesso, e il contenuto del backup. L'app può vedere e gestire <strong>solo i file che crea lei stessa</strong> su Drive (permesso "drive.file"), mai il resto del tuo Drive. Dopo ogni salvataggio l'app tiene gli ultimi 5 backup (manuali e automatici insieme) e sposta i più vecchi nel cestino di Drive, da cui puoi recuperarli per 30 giorni. I dati vanno direttamente dal tuo dispositivo a Google: lo sviluppatore non li riceve. Gestito secondo la <a href="https://policies.google.com/privacy">Privacy Policy di Google</a>.</td></tr>
-<tr><td>Acquisto Diario Auto Pro</td><td>Google Play Billing</td><td>Gestito interamente da Google secondo la <a href="https://policies.google.com/privacy">Privacy Policy di Google</a>; Diario Auto riceve solo la conferma dell'acquisto, non dati di pagamento</td></tr>
 </table>
 <p>Le funzioni base dell'app (registro rifornimenti, manutenzioni, scadenze, spese) funzionano anche senza connessione.</p>
 <p>L'uso e il trasferimento delle informazioni ricevute dalle API di Google rispetta la <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, inclusi i requisiti di Limited Use. I dati ricevuti da Google servono solo a salvare e ripristinare il tuo backup: non vengono usati per pubblicità né condivisi con terzi.</p>
 <h2>Permessi del dispositivo richiesti</h2>
 <ul>
 <li><strong>Internet</strong>: per i servizi esterni elencati sopra.</li>
+<li><strong>Posizione</strong>: solo quando apri "Distributori vicini" e solo mentre la pagina è aperta, per trovare i distributori intorno a te. La posizione non viene inviata a nessuno: l'ultima usata resta solo sul telefono per non riscaricare i dati a ogni apertura. Puoi rifiutare e scrivere il comune a mano.</li>
+<li><strong>Microfono</strong>: solo quando tocchi il pulsante del rifornimento a voce, per dettare importo, prezzo e chilometri. Puoi rifiutare e inserire i dati a mano.</li>
 <li><strong>Bluetooth</strong>: solo se usi la diagnostica OBD2, per collegarti al tuo adattatore Bluetooth. I dati letti dall'auto restano sul dispositivo.</li>
 <li><strong>Notifiche</strong>: per gli avvisi delle scadenze (30 giorni prima, 7 giorni prima e il giorno stesso). Quando hai delle scadenze l'app chiede il permesso ad Android; puoi rifiutare, oppure disattivarle quando vuoi dalle impostazioni dell'app o di Android. Gli avvisi sono generati e mostrati interamente sul tuo dispositivo.</li>
 <li><strong>Foto</strong>: solo se alleghi una foto a un veicolo, a una manutenzione o a una spesa — l'immagine resta salvata localmente (compressa), non viene caricata da nessuna parte.</li>
@@ -81,7 +86,7 @@
 
 <article id="en" lang="en" hidden>
 <h1>Privacy Policy — Diario Auto</h1>
-<p><strong>Last updated</strong>: October 16, 2026</p>
+<p><strong>Last updated</strong>: November 3, 2026</p>
 <h2>The basic principle</h2>
 <p>Diario Auto is a <strong>local</strong> app: all the data you enter (vehicles, refuels, maintenance, expenses, deadlines, diagnostic sessions) stays <strong>on your device</strong>, in the app's private internal storage. There is no developer account and no developer server that receives or stores your data.</p>
 <h2>Data we do NOT collect</h2>
@@ -99,22 +104,27 @@
 </ul>
 <p>You can delete everything at any time by clearing the app's data in your device settings, or by uninstalling the app.</p>
 <h2>Backup</h2>
-<p>The app includes a manual backup: you save the file wherever you want and it stays under your control; it is never sent to us. With Diario Auto Pro you can also save a copy to your Google Drive (see below).</p>
-<p><strong>Weekly automatic backup (Pro only)</strong>: after you have made at least one manual backup to Google Drive, the app uploads a new copy to your Drive by itself about once a week, when you open it and are online. It uses the Google access you have already authorized, without asking you anything. It adds a file on Drive and never changes the data on your phone. If the data on your phone is much less than in the last backup (for example after an accidental deletion), the automatic backup stops so that it does not replace your good backups. You can turn it off at any time in the app's Backup section.</p>
+<p>The app includes a manual backup: you save the file wherever you want and it stays under your control; it is never sent to us. You can also save a copy to your Google Drive (see below).</p>
+<p><strong>Weekly automatic backup</strong>: after you have made at least one manual backup to Google Drive, the app uploads a new copy to your Drive by itself about once a week, when you open it and are online. It uses the Google access you have already authorized, without asking you anything. It adds a file on Drive and never changes the data on your phone. If the data on your phone is much less than in the last backup (for example after an accidental deletion), the automatic backup stops so that it does not replace your good backups. You can turn it off at any time in the app's Backup section.</p>
 <h2>External services contacted during use</h2>
 <p>Some features of the app contact third-party services. These services only receive the information strictly needed for the requested feature, not the rest of your data:</p>
 <table>
 <tr><th>Feature</th><th>Service contacted</th><th>What is sent</th></tr>
 <tr><td>Address search (home-to-work commute)</td><td>Nominatim (nominatim.openstreetmap.org)</td><td>The text of the address you search for</td></tr>
 <tr><td>Commute route calculation</td><td>OSRM (router.project-osrm.org)</td><td>Start and destination coordinates</td></tr>
+<tr><td>Nearby fuel stations (fuel prices, Italy only)</td><td>Italian Ministry of Enterprises and Made in Italy — MIMIT (www.mimit.gov.it)</td><td>No personal data: the app downloads the public list of stations and prices (open data, IODL 2.0 licence). Your location is <strong>not sent</strong>: nearby stations are worked out on the phone.</td></tr>
+<tr><td>Town search for fuel stations (if you don't use GPS)</td><td>Nominatim (nominatim.openstreetmap.org)</td><td>The text of the town you search for</td></tr>
+<tr><td>Fuel station map</td><td>OpenFreeMap (tiles.openfreemap.org), OpenStreetMap data</td><td>Requests for the map tiles of the area you are viewing, as with any online map</td></tr>
+<tr><td>Voice refuel entry (only with the app in Italian)</td><td>Android speech recognition service (usually Google)</td><td>Your voice, only while the microphone is on: the phone's speech service turns it into text and may process it on Google's servers according to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. Diario Auto only receives the text; it does not record or store the audio.</td></tr>
 <tr><td>Google Drive backup, manual or automatic (optional feature, you turn it on)</td><td>Google (Google sign-in + Google Drive API)</td><td>Your Google email address, used only to identify the sign-in, and the content of the backup. The app can see and manage <strong>only the files it creates itself</strong> on Drive ("drive.file" permission), never the rest of your Drive. After each save the app keeps the last 5 backups (manual and automatic together) and moves older ones to the Drive trash, where you can recover them for 30 days. Data goes directly from your device to Google: the developer does not receive it. Handled according to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</td></tr>
-<tr><td>Diario Auto Pro purchase</td><td>Google Play Billing</td><td>Handled entirely by Google according to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>; Diario Auto only receives the purchase confirmation, no payment details</td></tr>
 </table>
 <p>The app's basic features (refuel log, maintenance, deadlines, expenses) also work offline.</p>
 <p>The use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Data received from Google is used only to save and restore your backup: it is not used for advertising and not shared with third parties.</p>
 <h2>Device permissions requested</h2>
 <ul>
 <li><strong>Internet</strong>: for the external services listed above.</li>
+<li><strong>Location</strong>: only when you open "Nearby fuel stations" and only while that page is open, to find the stations around you. Your location is not sent to anyone: the last one used stays only on the phone so the data is not downloaded again every time. You can refuse and type the town instead.</li>
+<li><strong>Microphone</strong>: only when you tap the voice refuel button, to dictate amount, price and kilometres. You can refuse and enter the data by hand.</li>
 <li><strong>Bluetooth</strong>: only if you use OBD2 diagnostics, to connect to your Bluetooth adapter. Data read from the car stays on the device.</li>
 <li><strong>Notifications</strong>: for deadline reminders (30 days before, 7 days before and on the day). When you have deadlines the app asks Android for permission; you can refuse, or turn them off at any time in the app or Android settings. Reminders are created and shown entirely on your device.</li>
 <li><strong>Photos</strong>: only if you attach a photo to a vehicle, maintenance or expense — the image is stored locally (compressed) and is not uploaded anywhere.</li>
@@ -158,4 +168,4 @@
   })();
 </script>
 </body>
-  </html>
+</html>
